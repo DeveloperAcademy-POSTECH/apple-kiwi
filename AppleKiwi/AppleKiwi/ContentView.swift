@@ -9,23 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack() {
-            HStack {
-                Text("마이페이지")
-                    .padding().font(.title)
-                Spacer()
-            }.background(.white)
-            
-            HStack{ Image("test")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-                    .aspectRatio(contentMode: .fit)
-                            .frame(width: 100)
-                            .clipShape(Circle()).padding()
-                
-                Text("changBro chaleea22@pos.idserve.net")
-                    .font(.body)
-                    .frame(minWidth: 0, idealWidth: 100, maxWidth: 400, minHeight: 0, maxHeight: 100, alignment: .center)
+
+        LoginView()
+
+    }
+}
 
                 
                 Spacer()

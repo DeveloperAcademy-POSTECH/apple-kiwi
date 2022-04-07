@@ -1,18 +1,31 @@
-    //
-//  ContentView.swift
+//
+//  MyPage.swift
 //  AppleKiwi
 //
-//  Created by MBSoo on 2022/04/06.
+//  Created by 이창형 on 2022/04/06.
 //
 
 import SwiftUI
 
-
-struct ContentView: View {
+struct MyPageView: View {
     var body: some View {
-
-    }
-}
+        VStack() {
+            HStack {
+                Text("마이페이지")
+                    .padding().font(.title)
+                Spacer()
+            }.background(.white)
+            
+            HStack{ Image("test")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                    .aspectRatio(contentMode: .fit)
+                            .frame(width: 100)
+                            .clipShape(Circle()).padding()
+                
+                Text("changBro chaleea22@pos.idserve.net")
+                    .font(.body)
+                    .frame(minWidth: 0, idealWidth: 100, maxWidth: 400, minHeight: 0, maxHeight: 100, alignment: .center)
 
                 
                 Spacer()
@@ -37,8 +50,11 @@ struct ContentView: View {
             }
         }
     }
-struct ContentView_Previews: PreviewProvider {
+    
+
+
+struct MyPage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MyPageView()
     }
 }

@@ -14,6 +14,7 @@
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
+		9A27651C27FE8519003AB1BE /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27651B27FE8519003AB1BE /* searchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A27651B27FE8519003AB1BE /* searchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				9A27651A27FE84F2003AB1BE /* MainPage */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
 				83C762F027FD685100FDC8D0 /* ContentView.swift */,
 				83C762F227FD685200FDC8D0 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */,
 			);
 			path = AppleKiwiUITests;
+			sourceTree = "<group>";
+		};
+		9A27651A27FE84F2003AB1BE /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				9A27651B27FE8519003AB1BE /* searchBar.swift */,
+			);
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
+				9A27651C27FE8519003AB1BE /* searchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

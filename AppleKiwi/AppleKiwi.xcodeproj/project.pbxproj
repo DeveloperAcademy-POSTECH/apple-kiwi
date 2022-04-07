@@ -17,6 +17,9 @@
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
+		F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163927FEB49900AC6744 /* WikiModel.swift */; };
+		F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */; };
+		F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */; };
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
@@ -53,6 +56,9 @@
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8C1163927FEB49900AC6744 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
+		F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWikiContentView.swift; sourceTree = "<group>"; };
+		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
 		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,8 +160,11 @@
 		F8E7FBA427FD6DA900CF3F7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */,
 				F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */,
 				F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */,
+				F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */,
+				F8C1163927FEB49900AC6744 /* WikiModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,11 +307,14 @@
 			files = (
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
+				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
+				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */,
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
 				2004978B27FD72FD00B217AC /* SignInView.swift in Sources */,
+				F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

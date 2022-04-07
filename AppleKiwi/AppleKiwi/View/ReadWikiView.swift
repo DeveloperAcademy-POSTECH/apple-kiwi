@@ -9,39 +9,32 @@ import SwiftUI
 import MarkdownView
 
 struct ReadWikiView: View {
-    private var markdown: String = """
-    ### Hi there 👋
-    
-    I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡
-    
-    I have a passion for clean code, Java, teaching, PHP, Lifeguarding and Javascript
-    
-    My current side project is [Markdown Profile](https://markdownprofile.com)
-
-    [LinkedIn 💼](https://linkedin.com/in/dannyverpoort)
-    
-    [Twitter 🐦](https://twitter.com/dannyverp)
-    
-    [Website 🌍](https://dannyverpoort.dev/)
-    
-    [Email 📬](mailto:hallo@dannyverpoort.nl)
-    """
+    @State private var isShowingSheet: Bool = false
+    @StateObject var wikiSample = WikiModel.sample
     
     var body: some View {
-        HStack {
-            ScrollView {
-                VStack {
-                    HStack {
-                        Text("창브로")
-                            .font(.title)
-                            .bold()
-                        Spacer()
-                    }.padding()
-                    Divider()
-                    MarkdownUI(body: markdown)
-                        .padding()
+        ScrollView {
+            VStack {
+                HStack {
+                    Text("\(wikiSample.title)")
+                        .font(.title)
+                        .bold()
                     Spacer()
-                }
+                }.padding()
+                Divider()
+                EditableMarkdownView(bodyText: $wikiSample.bodyText)
+                    .padding()
+                Spacer()
+            }
+        }
+        .navigationBarTitle("위키 조회", displayMode: .inline)
+        .toolbar {
+            Button("위키 수정") {
+                isShowingSheet.toggle()
+            }
+            .sheet(isPresented: $isShowingSheet) {
+                EditWikiView(isShowingSheet: $isShowingSheet)
+                    .environmentObject(wikiSample)
             }
         }
     }

@@ -114,7 +114,6 @@
 		83C762E227FD685100FDC8D0 = {
 			isa = PBXGroup;
 			children = (
-				320E53B727FECF0500D394F2 /* MainPageView */,
 				83C762ED27FD685100FDC8D0 /* AppleKiwi */,
 				83C762FE27FD685200FDC8D0 /* AppleKiwiTests */,
 				83C7630827FD685200FDC8D0 /* AppleKiwiUITests */,
@@ -135,6 +134,7 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				320E53B727FECF0500D394F2 /* MainPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
 				83C762F027FD685100FDC8D0 /* ContentView.swift */,

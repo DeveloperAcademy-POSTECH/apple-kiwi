@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    // 회원가입 및 비밀번호 찾기 상태를 enum으로 나타냄
     enum Action {
         case signUp, resetPw
     }
@@ -41,10 +42,10 @@ struct LoginView: View {
         }
         .sheet(isPresented: $showSheet) {
             if self.action == .resetPw {
-                
+                // 비밀번호 변경창으로 넘어감
             }
             else if self.action == .signUp {
-                
+                // 회원가입 창으로 넘어감
             }
         }
     }
@@ -55,13 +56,3 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
-
-
-//    .sheet(isPresented: $showSheet) {
-//        if self.action == .resetPW {
-//            print("password change view")
-//        }
-//        else {
-//            print("register view")
-//        }
-//    }

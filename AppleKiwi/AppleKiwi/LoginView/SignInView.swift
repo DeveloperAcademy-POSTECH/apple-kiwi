@@ -16,12 +16,7 @@ struct SignInView: View {
     
     var body: some View {
         VStack {
-                //.offset(y:-45)
-            
-//                Text("이메일")
-//                    .fontWeight(.bold)
-//                    .multilineTextAlignment(.leading)
-//                    .frame(width: 60.0)
+            // 이메일 입력창
             TextField("Email", text: $user.email)
                 .padding()
                 .background(lightGray)
@@ -29,24 +24,15 @@ struct SignInView: View {
                 .padding(.bottom, 20)
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
-                //.offset(y:-80)
-//                Text("비밀번호")
-//                        .fontWeight(.bold)
-//                        .multilineTextAlignment(.leading)
-//                        .frame(width: 60.0)
                         
-                
+            // 비밀번호 입력창
             SecureField("Password", text: $user.password)
                 .padding()
                 .background(lightGray)
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-                //.offset(y:-70)
             
-//            Button(action: {
-//
-//
-//            })
+            // 로그인 버튼 (버튼 기능 미구현)
             Text("로그인")
                 .font(.system(size: 23, weight: .bold))
                 .foregroundColor(.white)
@@ -54,18 +40,20 @@ struct SignInView: View {
                 .frame(width: 200, height: 60)
                 .background(.blue)
                 .cornerRadius(35.0)
-                //.offset(y:-55)
             
+            // 비밀번호 찾기 버튼
             Button(action: {
                 self.action = .resetPw
                 self.showSheet = true
             }) {
                 FindPasswordButton()
             }
+            
         }
     }
 }
 
+// 비밀번호 찾기 버튼 스타일
 struct FindPasswordButton: View {
     var body: some View {
         Text("비밀번호를 잊어버리셨나요?")

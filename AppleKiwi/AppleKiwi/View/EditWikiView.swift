@@ -8,50 +8,27 @@
 import SwiftUI
 
 struct EditWikiView: View {
-    @State private var markdown: String = """
-    ### Hi there 👋
-    
-    I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡
-    
-    I have a passion for clean code, Java, teaching, PHP, Lifeguarding and Javascript
-    
-    My current side project is [Markdown Profile](https://markdownprofile.com)
-    
-    [LinkedIn 💼](https://linkedin.com/in/dannyverpoort)
-    
-    [Twitter 🐦](https://twitter.com/dannyverp)
-    
-    [Website 🌍](https://dannyverpoort.dev/)
-    
-    [Email 📬](mailto:hallo@dannyverpoort.nl)
-    """
+    @Binding var isShowingSheet: Bool
+    @EnvironmentObject var wikiSample: WikiModel
     
     var body: some View {
         VStack {
             HStack {
                 Text("**위키 수정**")
                     .padding()
-                    .font(.title)
-                
                 Spacer()
-                Button("수정 완료") {
-                    
-                }.padding()
+                Button("완료") {
+                    isShowingSheet.toggle()
+                }
+                .padding()
             }
             Divider()
             ScrollView(.vertical) {
-                VStack {
-                    TextEditor(text: $markdown)
-                        .padding()
-                        .frame(maxHeight: .infinity)
-                }
+                TextEditor(text: $wikiSample.bodyText)
+                    .padding()
+                    .frame(height: 800)
             }
         }
-    }
-}
-
-struct EditWikiView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditWikiView()
+        
     }
 }

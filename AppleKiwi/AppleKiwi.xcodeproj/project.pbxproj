@@ -15,20 +15,16 @@
 		83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */; };
 		83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762F027FD685100FDC8D0 /* ContentView.swift */; };
 		83C762F327FD685200FDC8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C762F227FD685200FDC8D0 /* Assets.xcassets */; };
+		83C762F627FD685200FDC8D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C762F527FD685200FDC8D0 /* Preview Assets.xcassets */; };
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
-
-		9A27651C27FE8519003AB1BE /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27651B27FE8519003AB1BE /* searchBar.swift */; };
-		9A27652027FECBEF003AB1BE /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27651F27FECBEF003AB1BE /* MainList.swift */; };
-
 		F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163927FEB49900AC6744 /* WikiModel.swift */; };
 		F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */; };
 		F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */; };
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,21 +54,17 @@
 		83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiApp.swift; sourceTree = "<group>"; };
 		83C762F027FD685100FDC8D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		83C762F227FD685200FDC8D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83C762F527FD685200FDC8D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83C762FB27FD685200FDC8D0 /* AppleKiwiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiTests.swift; sourceTree = "<group>"; };
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-
-		9A27651B27FE8519003AB1BE /* searchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
-		9A27651F27FECBEF003AB1BE /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
-
 		F8C1163927FEB49900AC6744 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
 		F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWikiContentView.swift; sourceTree = "<group>"; };
 		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
 		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,24 +134,24 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
-
-				9A27653127FEDF88003AB1BE /* MainListView */,
-				9A27651A27FE84F2003AB1BE /* MainPage */,
-
 				320E53B727FECF0500D394F2 /* MainPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
-
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
 				83C762F027FD685100FDC8D0 /* ContentView.swift */,
 				F8E7FBA427FD6DA900CF3F7E /* View */,
 				83C762F227FD685200FDC8D0 /* Assets.xcassets */,
-
-
 				83C762F427FD685200FDC8D0 /* Preview Content */,
 				2004978827FD717000B217AC /* UserViewModel.swift */,
-
 			);
 			path = AppleKiwi;
+			sourceTree = "<group>";
+		};
+		83C762F427FD685200FDC8D0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				83C762F527FD685200FDC8D0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		83C762FE27FD685200FDC8D0 /* AppleKiwiTests */ = {
@@ -179,22 +171,6 @@
 			path = AppleKiwiUITests;
 			sourceTree = "<group>";
 		};
-
-		9A27651A27FE84F2003AB1BE /* MainPage */ = {
-			isa = PBXGroup;
-			children = (
-				9A27651B27FE8519003AB1BE /* searchBar.swift */,
-				9A27651F27FECBEF003AB1BE /* MainList.swift */,
-			);
-			path = MainPage;
-			sourceTree = "<group>";
-		};
-		9A27653127FEDF88003AB1BE /* MainListView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainListView;
-
 		F8E7FBA427FD6DA900CF3F7E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +181,6 @@
 				F8C1163927FEB49900AC6744 /* WikiModel.swift */,
 			);
 			path = View;
-
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C762F627FD685200FDC8D0 /* Preview Assets.xcassets in Resources */,
 				83C762F327FD685200FDC8D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,11 +324,6 @@
 				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
-
-				9A27652027FECBEF003AB1BE /* MainList.swift in Sources */,
-				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
-				9A27651C27FE8519003AB1BE /* searchBar.swift in Sources */,
-
 				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,
@@ -360,7 +331,6 @@
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
 				2004978B27FD72FD00B217AC /* SignInView.swift in Sources */,
 				F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -501,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -526,7 +496,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +524,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

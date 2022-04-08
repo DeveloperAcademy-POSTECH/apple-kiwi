@@ -27,6 +27,7 @@
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
+		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
 		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
+		F8FB0409280024BB00026CAD /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				320E53B827FECF2000D394F2 /* MyPageView.swift */,
 				320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */,
+				F8FB0409280024BB00026CAD /* NotificationSettingView.swift */,
 			);
 			path = MainPageView;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD265602800194900C6B562 /* MainList.swift in Sources */,
+				F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */,
 				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,

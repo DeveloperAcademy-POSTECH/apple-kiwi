@@ -42,10 +42,13 @@ struct MyPageView: View {
                                 Text("비밀번호 변경")
                             })
                     
-                
-                Button("기본 방침") {
+                NavigationLink(
+                            destination: RuleView(),
+                            label: {
+                                Text("기본 방침")
+                            })
+              
                     
-                }
                 Button("회원 탈퇴") {
                     
                 }

@@ -12,7 +12,10 @@
 		2004978B27FD72FD00B217AC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004978A27FD72FD00B217AC /* SignInView.swift */; };
 		320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53B827FECF2000D394F2 /* MyPageView.swift */; };
 		320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */; };
+
 		32F6D779280024BC00902575 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6D778280024BC00902575 /* RuleView.swift */; };
+		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
+
 		83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */; };
 		83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762F027FD685100FDC8D0 /* ContentView.swift */; };
 		83C762F327FD685200FDC8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C762F227FD685200FDC8D0 /* Assets.xcassets */; };
@@ -28,6 +31,7 @@
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
+		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,10 @@
 		2004978A27FD72FD00B217AC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		320E53B827FECF2000D394F2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+
 		32F6D778280024BC00902575 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+
 		83C762EB27FD685100FDC8D0 /* AppleKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiApp.swift; sourceTree = "<group>"; };
 		83C762F027FD685100FDC8D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
 		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
+		F8FB0409280024BB00026CAD /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 			children = (
 				2004978627FD6B8B00B217AC /* LoginView.swift */,
 				2004978A27FD72FD00B217AC /* SignInView.swift */,
+				838A03F5280029EF00496AC8 /* SignUpView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -114,6 +123,7 @@
 				320E53B827FECF2000D394F2 /* MyPageView.swift */,
 				32F6D778280024BC00902575 /* RuleView.swift */,
 				320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */,
+				F8FB0409280024BB00026CAD /* NotificationSettingView.swift */,
 			);
 			path = MainPageView;
 			sourceTree = "<group>";
@@ -337,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD265602800194900C6B562 /* MainList.swift in Sources */,
+				F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */,
+				838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */,
 				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,

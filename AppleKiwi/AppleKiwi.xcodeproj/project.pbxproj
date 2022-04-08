@@ -19,6 +19,8 @@
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
+		9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655D2800191700C6B562 /* SearchBar.swift */; };
+		9AD265602800194900C6B562 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655F2800194900C6B562 /* MainList.swift */; };
 		F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163927FEB49900AC6744 /* WikiModel.swift */; };
 		F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */; };
 		F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */; };
@@ -60,6 +62,8 @@
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9AD2655D2800191700C6B562 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		9AD2655F2800194900C6B562 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		F8C1163927FEB49900AC6744 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
 		F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWikiContentView.swift; sourceTree = "<group>"; };
 		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				9AD2655C2800190000C6B562 /* MainPageList */,
 				320E53B727FECF0500D394F2 /* MainPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
@@ -169,6 +174,15 @@
 				83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */,
 			);
 			path = AppleKiwiUITests;
+			sourceTree = "<group>";
+		};
+		9AD2655C2800190000C6B562 /* MainPageList */ = {
+			isa = PBXGroup;
+			children = (
+				9AD2655D2800191700C6B562 /* SearchBar.swift */,
+				9AD2655F2800194900C6B562 /* MainList.swift */,
+			);
+			path = MainPageList;
 			sourceTree = "<group>";
 		};
 		F8E7FBA427FD6DA900CF3F7E /* View */ = {
@@ -319,6 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD265602800194900C6B562 /* MainList.swift in Sources */,
+				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
 				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,

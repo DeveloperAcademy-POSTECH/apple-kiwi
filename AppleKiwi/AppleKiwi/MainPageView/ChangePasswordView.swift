@@ -11,30 +11,38 @@ struct ChangePasswordView: View {
     @State private var userViewModel = UserViewModel()
     @State private var newPassword = ""
     var body: some View {
-        VStack{
-            HStack{
-                Text("현재 비밀번호")
-                    .padding()
-                Spacer()
-                SecureField("현재 비밀번호", text: $userViewModel.password)
-                    .frame(width: 200, height: 10, alignment: .center)
+        VStack {
+            VStack{
+                HStack{
+                    Text("현재 비밀번호")
+                        .padding()
+                    Spacer()
+                    SecureField("현재 비밀번호", text: $userViewModel.password)
+                        .frame(width: 175, height: 10, alignment: .center)
+                }
+                HStack{
+                    Text("변경할 비밀번호")
+                        .padding()
+                    Spacer()
+                    SecureField("변경할 비밀번호", text: $newPassword).frame(width: 175, height: 10, alignment: .center)
+                }
+                HStack{
+                    Text("변경할 비밀번호 확인")
+                        .padding()
+                    Spacer()
+                    SecureField("변경할 비밀번호 확인", text: $newPassword)
+                        .frame(width: 175, height: 10, alignment: .center)
+                    
+                }
+            
+            
             }
-            HStack{
-                Text("변경할 비밀번호")
-                    .padding()
-                Spacer()
-                SecureField("변경할 비밀번호", text: $newPassword).frame(width: 200, height: 10, alignment: .center)
+            .padding()
+            Button("비밀번호 변경") {
+                
+                
             }
-            HStack{
-                Text("변경할 비밀번호 확인")
-                    .padding()
-                Spacer()
-                SecureField("변경할 비밀번호 확인", text: $newPassword)
-                    .frame(width: 200, height: 10, alignment: .center)
-            }
-        
-        
-    }
+        }
     }
 }
 

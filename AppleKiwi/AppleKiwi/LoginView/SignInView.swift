@@ -1,6 +1,6 @@
 //
 //  SignInView.swift
-//  AppleKiwi
+//  apple-kiwi
 //
 //  Created by Kyubo Shim on 2022/04/06.
 //

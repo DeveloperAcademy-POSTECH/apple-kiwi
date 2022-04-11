@@ -10,11 +10,11 @@
 		2004978727FD6B8B00B217AC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004978627FD6B8B00B217AC /* LoginView.swift */; };
 		2004978927FD717000B217AC /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004978827FD717000B217AC /* UserViewModel.swift */; };
 		2004978B27FD72FD00B217AC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004978A27FD72FD00B217AC /* SignInView.swift */; };
+		3202D61428041F030054E508 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202D61328041F030054E508 /* TabBar.swift */; };
 		320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53B827FECF2000D394F2 /* MyPageView.swift */; };
 		320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */; };
-		835E4E6A28002FE400EB80B3 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E4E6928002FE400EB80B3 /* PasswordView.swift */; };
-
 		32F6D779280024BC00902575 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6D778280024BC00902575 /* RuleView.swift */; };
+		835E4E6A28002FE400EB80B3 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E4E6928002FE400EB80B3 /* PasswordView.swift */; };
 		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
 		83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */; };
 		83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762F027FD685100FDC8D0 /* ContentView.swift */; };
@@ -56,11 +56,11 @@
 		2004978627FD6B8B00B217AC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2004978827FD717000B217AC /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2004978A27FD72FD00B217AC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3202D61328041F030054E508 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		320E53B827FECF2000D394F2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		835E4E6928002FE400EB80B3 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-
 		32F6D778280024BC00902575 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		835E4E6928002FE400EB80B3 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		83C762EB27FD685100FDC8D0 /* AppleKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiApp.swift; sourceTree = "<group>"; };
@@ -120,6 +120,14 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		3202D61228041EE70054E508 /* TabBarControllerScene */ = {
+			isa = PBXGroup;
+			children = (
+				3202D61328041F030054E508 /* TabBar.swift */,
+			);
+			path = TabBarControllerScene;
+			sourceTree = "<group>";
+		};
 		320E53B727FECF0500D394F2 /* MainPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +162,7 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				3202D61228041EE70054E508 /* TabBarControllerScene */,
 				D1B10169280407CA00B96122 /* StartPageView */,
 				9AD2655C2800190000C6B562 /* MainPageList */,
 				320E53B727FECF0500D394F2 /* MainPageView */,
@@ -377,6 +386,7 @@
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
 				2004978B27FD72FD00B217AC /* SignInView.swift in Sources */,
 				F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */,
+				3202D61428041F030054E508 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

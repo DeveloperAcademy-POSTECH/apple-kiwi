@@ -17,7 +17,9 @@ struct PasswordView: View {
                 Image("kiwi")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 250, alignment: .topLeading)
+                    .frame(width: 250,
+                           height: 300,
+                           alignment: .topLeading)
                     .clipShape(Circle()).padding()
                 List{
                     HStack{
@@ -46,6 +48,17 @@ struct PasswordView: View {
                             .keyboardType(.default)
                             .textFieldStyle(.automatic)
                             .frame( height: 20, alignment: .leading)
+                        Spacer()
+                        Button(action: {
+                        }){
+                            Text("중복확인")
+                                .fontWeight(.light)
+                                .frame(width: 60, height: 20, alignment: .center)
+                                .foregroundColor(Color.white)
+                        }
+                        .buttonStyle(.bordered)
+                        .background(Color.gray)
+                        .cornerRadius(10)
                     }
                     HStack{
                         Text("이메일")
@@ -73,13 +86,23 @@ struct PasswordView: View {
                             .keyboardType(.default)
                             .textFieldStyle(.automatic)
                             .frame( height: 20, alignment: .leading)
-                        
+                            .onSubmit {
+                                if(user.password == Repeatpassword){
+                                   VerifyPassword = true
+                                }
+                            }
                     }
                 }
                 .listStyle(.grouped)
+                NavigationLink(destination: MyPageView().navigationBarHidden(true),
+                               label: {
+                    Text("회원가입")
+                })
+//                .disabled(!VerifyPassword)
             }
+            .navigationBarTitle(Text("회원가입"))
         }
-        .navigationBarTitle(Text("회원가입"))
+        
     }
 }
 

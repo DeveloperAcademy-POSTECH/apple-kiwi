@@ -13,4 +13,15 @@ struct UserViewModel {
     var nickname: String = ""
     var name: String = ""
     var ID: String = ""
+    
+    func isEmpty(_field:String) -> Bool {
+        return _field.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+    
+    var isEmailEmpty:Bool {
+        if isEmpty(_field: email) {
+            return false
+        }
+        return true
+    }
 }

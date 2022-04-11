@@ -50,7 +50,7 @@ struct SignUpView: View {
                         Text("인증번호 전송")
                             .frame(width: 130, height: 20, alignment: .center)
                     }
-//                    .disabled(!EmailVerify)
+                    .disabled(!user.isEmailEmpty)
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)

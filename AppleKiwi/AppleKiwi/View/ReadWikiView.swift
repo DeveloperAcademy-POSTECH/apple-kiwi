@@ -11,7 +11,7 @@ import MarkdownView
 struct ReadWikiView: View {
     @State private var isShowingSheet: Bool = false
     @StateObject var wikiSample = WikiModel.sample
-    
+     var user: User
     var body: some View {
         ScrollView {
             VStack {
@@ -39,11 +39,11 @@ struct ReadWikiView: View {
         }
     }
 }
-
+/*
 struct ReadWikiView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ReadWikiView()
         }
     }
-}
+}*/

@@ -9,20 +9,13 @@ import SwiftUI
 
 struct MainList : View {
     @State var text : String = ""
-
-    struct User: Identifiable {
-        var id = UUID()
-        var name: String
-    }
-    @State var Users = [User(name: "Leeo"),
-                               User(name: "Lisa"),
-                               User(name: "Sven"),
-                        User(name: "Leeo"),
-                        User(name: "Coo")
+    @State var users = [User(name: "Leeo",content: "LeeoContent"),
+                 User(name: "Lisa", content:"LisaContent"),
+                 User(name: "Sven",content:"SvenContent"),
+                 User(name: "Coo", content:"CooContent")
                      
     ]
-    
-    
+
     var body :some View{
   
 
@@ -38,7 +31,7 @@ struct MainList : View {
                     Section(header: Text("최신리스트")){
                         ScrollView(.horizontal) {
                             HStack {
-                                ForEach(Users, id: \.id) {user in
+                                ForEach(users, id: \.id) {user in
                                     NavigationLink(destination: Text(" \(user.name)")) {
                                         Circle()
                                             .fill(Color.blue)
@@ -50,10 +43,10 @@ struct MainList : View {
                     }
                     Section(header: Text("전체리스트")){
                         
-                        ForEach(Users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
-                        { i in
-                            NavigationLink(destination: Text(" \(i.name)")) {
-                                Text("\(i.name)")
+                        ForEach(users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
+                        { user in
+                            NavigationLink(destination: ReadWikiView(user: user)) {
+                                Text("\(user.name)")
                             }
                         }
                         

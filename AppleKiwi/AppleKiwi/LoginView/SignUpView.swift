@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
     @State var email:String = ""
     @State var verify:String = ""
     @State private var EnterVerify = false
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView{
             VStack {
@@ -82,7 +85,7 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
+            .previewInterfaceOrientation(.portrait)
     }
 }
 

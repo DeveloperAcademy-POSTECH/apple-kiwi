@@ -43,13 +43,21 @@ struct SignInView: View {
             
             // 비밀번호 찾기 버튼
             Button(action: {
-                self.action = .resetPw
-                self.showSheet = true
-            }) {
+                showSheet.toggle()
+            }){
                 FindPasswordButton()
             }
-            
+            .sheet(isPresented: $showSheet) {
+                SignUpView()
+                // FindPasswordView()
+            }
         }
+    }
+}
+
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView(showSheet: .constant(false), action: .constant(.signUp))
     }
 }
 

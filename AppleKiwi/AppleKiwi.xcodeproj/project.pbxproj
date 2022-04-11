@@ -12,10 +12,9 @@
 		2004978B27FD72FD00B217AC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004978A27FD72FD00B217AC /* SignInView.swift */; };
 		320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53B827FECF2000D394F2 /* MyPageView.swift */; };
 		320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */; };
-
+		324374A42803FEEE00483BCB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324374A32803FEEE00483BCB /* TabBar.swift */; };
 		32F6D779280024BC00902575 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6D778280024BC00902575 /* RuleView.swift */; };
 		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
-
 		83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */; };
 		83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762F027FD685100FDC8D0 /* ContentView.swift */; };
 		83C762F327FD685200FDC8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C762F227FD685200FDC8D0 /* Assets.xcassets */; };
@@ -57,10 +56,9 @@
 		2004978A27FD72FD00B217AC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		320E53B827FECF2000D394F2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-
+		324374A32803FEEE00483BCB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		32F6D778280024BC00902575 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-
 		83C762EB27FD685100FDC8D0 /* AppleKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiApp.swift; sourceTree = "<group>"; };
 		83C762F027FD685100FDC8D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +126,14 @@
 			path = MainPageView;
 			sourceTree = "<group>";
 		};
+		324374A22803FECB00483BCB /* TabBarControllerScene */ = {
+			isa = PBXGroup;
+			children = (
+				324374A32803FEEE00483BCB /* TabBar.swift */,
+			);
+			path = TabBarControllerScene;
+			sourceTree = "<group>";
+		};
 		83C762E227FD685100FDC8D0 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +157,7 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				324374A22803FECB00483BCB /* TabBarControllerScene */,
 				9AD2655C2800190000C6B562 /* MainPageList */,
 				320E53B727FECF0500D394F2 /* MainPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
@@ -355,6 +362,7 @@
 				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
+				324374A42803FEEE00483BCB /* TabBar.swift in Sources */,
 				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,

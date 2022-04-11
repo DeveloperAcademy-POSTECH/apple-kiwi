@@ -33,19 +33,24 @@ struct MyPageView: View {
             }
             
             List {
-                Button("알림설정") {
-                    
-                }
+                NavigationLink(
+                            destination: NotificationSettingView(),
+                            label: {
+                                Text("알림 설정")
+                            })
                 NavigationLink(
                             destination: ChangePasswordView(),
                             label: {
                                 Text("비밀번호 변경")
                             })
                     
-                
-                Button("기본 방침") {
+                NavigationLink(
+                            destination: RuleView(),
+                            label: {
+                                Text("기본 방침")
+                            })
+              
                     
-                }
                 Button("회원 탈퇴") {
                     
                 }

@@ -33,9 +33,11 @@ struct MyPageView: View {
             }
             
             List {
-                Button("알림설정") {
-                    
-                }
+                NavigationLink(
+                            destination: NotificationSettingView(),
+                            label: {
+                                Text("알림 설정")
+                            })
                 NavigationLink(
                             destination: ChangePasswordView(),
                             label: {

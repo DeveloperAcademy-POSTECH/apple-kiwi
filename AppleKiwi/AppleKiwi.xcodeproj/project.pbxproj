@@ -128,7 +128,7 @@
 			path = TabBarControllerScene;
 			sourceTree = "<group>";
 		};
-		320E53B727FECF0500D394F2 /* MainPageView */ = {
+		320E53B727FECF0500D394F2 /* MyPageView */ = {
 			isa = PBXGroup;
 			children = (
 				320E53B827FECF2000D394F2 /* MyPageView.swift */,
@@ -136,7 +136,7 @@
 				320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */,
 				F8FB0409280024BB00026CAD /* NotificationSettingView.swift */,
 			);
-			path = MainPageView;
+			path = MyPageView;
 			sourceTree = "<group>";
 		};
 		83C762E227FD685100FDC8D0 = {
@@ -165,7 +165,7 @@
 				3202D61228041EE70054E508 /* TabBarControllerScene */,
 				D1B10169280407CA00B96122 /* StartPageView */,
 				9AD2655C2800190000C6B562 /* MainPageList */,
-				320E53B727FECF0500D394F2 /* MainPageView */,
+				320E53B727FECF0500D394F2 /* MyPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
 				83C762F027FD685100FDC8D0 /* ContentView.swift */,

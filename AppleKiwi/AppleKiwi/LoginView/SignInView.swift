@@ -48,8 +48,7 @@ struct SignInView: View {
                 FindPasswordButton()
             }
             .sheet(isPresented: $showSheet) {
-                SignUpView()
-                // FindPasswordView()
+                PasswordView()
             }
         }
     }

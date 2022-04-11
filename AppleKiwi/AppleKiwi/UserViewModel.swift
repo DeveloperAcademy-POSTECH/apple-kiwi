@@ -11,5 +11,6 @@ struct UserViewModel {
     var email: String = ""
     var password: String = ""
     var nickname: String = ""
-    
+    var name: String = ""
+    var ID: String = ""
 }

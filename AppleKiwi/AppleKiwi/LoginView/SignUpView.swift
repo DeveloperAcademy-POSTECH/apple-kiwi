@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State var email:String = ""
+    @State var user: UserViewModel = UserViewModel()
     @State var verify:String = ""
     @State private var EnterVerify = false
+    @State private var EmailVerify = false
     var body: some View {
         NavigationView{
             VStack {
@@ -18,7 +19,7 @@ struct SignUpView: View {
                     Text("이메일")
                         .padding(.leading)
                     Spacer()
-                    TextField("appledev@pos.idserve.net", text: $email)
+                    TextField("appledev@pos.idserve.net", text: $user.email)
                         .keyboardType(.emailAddress)
                         .textFieldStyle(.automatic)
                         .frame(width: 230, height: 40, alignment: .leading)
@@ -34,6 +35,10 @@ struct SignUpView: View {
                             .keyboardType(.decimalPad)
                             .textFieldStyle(.automatic)
                             .frame(width: 230, height: 40, alignment: .leading)
+                            .submitLabel(.next)
+                            .onSubmit {
+                                validationEmail()
+                            }
                         Spacer()
                         
                     }
@@ -45,6 +50,7 @@ struct SignUpView: View {
                         Text("인증번호 전송")
                             .frame(width: 130, height: 20, alignment: .center)
                     }
+                    .disabled(!EmailVerify)
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)
@@ -62,27 +68,31 @@ struct SignUpView: View {
                     .buttonStyle(.bordered)
                     .background(Color.cyan)
                     .cornerRadius(10)
-                    Button(action: {
-                    }){
-                        Text("인증번호 입력")
-                            .frame(width: 130, height: 20, alignment: .center)
-                    }
+                    NavigationLink(destination: PasswordView(), label:{ Text("인증번호 입력")
+                            .frame(width: 130, height: 20, alignment: .center
+                    )})
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)
                     .background(Color.blue)
                     .cornerRadius(10)
+                    
+                    
                 }
+                
             }
             .navigationBarTitle(Text("이메일 인증"))
         }
+    }
+    private func validationEmail(){
+        EmailVerify = true
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
+            .previewInterfaceOrientation(.portrait)
     }
 }
 

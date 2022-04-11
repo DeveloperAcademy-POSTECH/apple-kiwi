@@ -50,11 +50,11 @@ struct SignUpView: View {
                         Text("인증번호 전송")
                             .frame(width: 130, height: 20, alignment: .center)
                     }
-                    .disabled(!EmailVerify)
+//                    .disabled(!EmailVerify)
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)
-                    .background(Color.blue)
+                    .background(Color("button kiwi"))
                     .cornerRadius(10)
                 }
                 else{
@@ -66,15 +66,15 @@ struct SignUpView: View {
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)
-                    .background(Color.cyan)
+                    .background(Color("button kiwi2"))
                     .cornerRadius(10)
-                    NavigationLink(destination: PasswordView(), label:{ Text("인증번호 입력")
+                    NavigationLink(destination: PasswordView().navigationBarHidden(true), label:{ Text("인증번호 입력")
                             .frame(width: 130, height: 20, alignment: .center
                     )})
                     .font(.footnote)
                     .foregroundColor(.white)
                     .buttonStyle(.bordered)
-                    .background(Color.blue)
+                    .background(Color("button kiwi"))
                     .cornerRadius(10)
                     
                     

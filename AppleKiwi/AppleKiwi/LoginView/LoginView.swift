@@ -29,23 +29,18 @@ struct LoginView: View {
                     .padding()
                     .frame(width: 350.0)
                     .offset(y: -50)
+                    
             }
             .navigationTitle("로그인")
             .toolbar {
                 Button (action:  {
-                    self.action = .signUp
-                    self.showSheet = true
+                    showSheet.toggle()
                 }, label: {
                     Text("회원가입")
                 })
-            }
-        }
-        .sheet(isPresented: $showSheet) {
-            if self.action == .resetPw {
-                // 비밀번호 변경창으로 넘어감
-            }
-            else if self.action == .signUp {
-                // 회원가입 창으로 넘어감
+                .sheet(isPresented: $showSheet) {
+                    SignUpView()
+                }
             }
         }
     }

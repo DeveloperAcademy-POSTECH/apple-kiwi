@@ -15,11 +15,13 @@ struct LoginView: View {
     
     @State var user: UserViewModel = UserViewModel()
     @State private var showSheet = false
+    @State private var showSignUp = false
     @State private var action: Action?
     
     var body: some View {
         NavigationView{
             VStack {
+                // 키위새 이미지
                 Image("kiwi")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -32,14 +34,18 @@ struct LoginView: View {
                     
             }
             .navigationTitle("로그인")
+            // 회원가입 툴바 버튼
             .toolbar {
                 Button (action:  {
-                    showSheet.toggle()
+                    showSignUp.toggle()
                 }, label: {
                     Text("회원가입")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("navigation bar kiwi"))
+
                 })
-                .sheet(isPresented: $showSheet) {
-                    SignUpView()
+                .sheet(isPresented: $showSignUp) {
+                    SignUpView(showSignUp: $showSignUp)
                 }
             }
         }

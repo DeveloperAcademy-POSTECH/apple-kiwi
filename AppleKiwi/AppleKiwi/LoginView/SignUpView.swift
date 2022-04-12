@@ -10,6 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     @State var user: UserViewModel = UserViewModel()
     @State var verify:String = ""
+    @Binding var showSignUp: Bool
     @State private var EnterVerify = false
     @State private var EmailVerify = false
     var body: some View {
@@ -91,7 +92,7 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(showSignUp: .constant(false))
             .previewInterfaceOrientation(.portrait)
     }
 }

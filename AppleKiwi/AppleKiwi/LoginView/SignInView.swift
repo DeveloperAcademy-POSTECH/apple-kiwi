@@ -32,14 +32,14 @@ struct SignInView: View {
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
             
-            // 로그인 버튼 (버튼 기능 미구현)
+            // 로그인 버튼
             Text("로그인")
                 .font(.system(size: 23, weight: .bold))
                 .foregroundColor(.white)
                 .padding()
                 .frame(width: 200, height: 60)
-                .background(.blue)
-                .cornerRadius(35.0)
+                .background(Color("button kiwi"))
+                .cornerRadius(10.0)
             
             // 비밀번호 찾기 버튼
             Button(action: {

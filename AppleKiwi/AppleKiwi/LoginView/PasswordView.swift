@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
+    
     @Environment(\.presentationMode) var presentationMode
     @State var user: UserViewModel = UserViewModel()
     @State private var VerifyPassword = false
@@ -57,7 +58,6 @@ struct PasswordView: View {
                                 Button(action: {
                                 }){
                                     Text("중복확인")
-                                        .fontWeight(.light)
                                         .frame(width: 60, height: 20, alignment: .center)
                                         .foregroundColor(Color.white)
                                 }
@@ -97,20 +97,22 @@ struct PasswordView: View {
                                         }
                                     }
                             }
+                            Spacer(minLength: 60)
+                            Button("회원가입") {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                            .frame(width: 150, height: 40)
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                            .buttonStyle(.plain)
+                            .background(Color("button kiwi"))
+                            .cornerRadius(10)
                     }
                     .listStyle(.grouped)
                     
     //                .disabled(!VerifyPassword)
                 }
-                        Button("회원가입") {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                        .frame(width: 150, height: 40)
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                        .buttonStyle(.plain)
-                        .background(Color("button kiwi"))
-                        .cornerRadius(10)
+                        
                     }
                 .navigationBarTitle(Text("회원가입"))
             }

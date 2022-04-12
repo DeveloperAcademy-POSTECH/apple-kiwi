@@ -13,6 +13,7 @@
 		3202D61428041F030054E508 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202D61328041F030054E508 /* TabBar.swift */; };
 		320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53B827FECF2000D394F2 /* MyPageView.swift */; };
 		320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */; };
+		322783FA2805698F00E47918 /* LoggedOutMyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322783F92805698F00E47918 /* LoggedOutMyPageView.swift */; };
 		32F6D779280024BC00902575 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6D778280024BC00902575 /* RuleView.swift */; };
 		835E4E6A28002FE400EB80B3 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E4E6928002FE400EB80B3 /* PasswordView.swift */; };
 		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
@@ -59,6 +60,7 @@
 		3202D61328041F030054E508 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		320E53B827FECF2000D394F2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		322783F92805698F00E47918 /* LoggedOutMyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutMyPageView.swift; sourceTree = "<group>"; };
 		32F6D778280024BC00902575 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		835E4E6928002FE400EB80B3 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				320E53B827FECF2000D394F2 /* MyPageView.swift */,
+				322783F92805698F00E47918 /* LoggedOutMyPageView.swift */,
 				32F6D778280024BC00902575 /* RuleView.swift */,
 				320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */,
 				F8FB0409280024BB00026CAD /* NotificationSettingView.swift */,
@@ -379,6 +382,7 @@
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
 				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
+				322783FA2805698F00E47918 /* LoggedOutMyPageView.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,

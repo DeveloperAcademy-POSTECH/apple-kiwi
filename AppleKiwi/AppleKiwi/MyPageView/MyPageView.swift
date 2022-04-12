@@ -14,21 +14,21 @@ struct MyPageView: View {
     @State private var showSheet = false
     @State private var isLoggedIn: Bool = true
     var body: some View {
-        if isLoggedIn{
+        
             NavigationView{
                 VStack() {
                     HStack {
                         Text("마이페이지")
                             .padding().font(.system(size: 30, weight: .bold))
                         Spacer()
-                        Button("로그아웃") {
-                            isLoggedIn.toggle()
-                            
-                        }
-                        .foregroundColor(Color.navKiwi)
+                        NavigationLink(
+                            destination: LoggedOutMyPageView().navigationBarHidden(true),
+                            label: {
+                                Text("로그아웃").foregroundColor(Color.navKiwi)
+                            })
                         .padding()
-                        
-                    }.background(.white)
+                    }
+                    
                     
                     HStack{ Image("test")
                             .resizable()
@@ -72,59 +72,10 @@ struct MyPageView: View {
                 }
                 
             }
-            }
+            
             
         
-    else{
-        NavigationView{
-            VStack() {
-                HStack {
-                    Text("마이페이지")
-                        .padding().font(.system(size: 30, weight: .bold))
-                    Spacer()
-                    
-                    NavigationLink(
-                        destination: LoginView(),
-                        label: {
-                            Text("로그인").foregroundColor(Color.navKiwi)
-                        })
-                    .padding()
-                }.background(.white)
-                
-                HStack{ Image("kiwi")
-                        .resizable()
-                        .edgesIgnoringSafeArea(.all)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100)
-                        .clipShape(Circle()).padding().offset(x: -80, y:0)
-                    VStack{
-                    Text("로그인이")
-                    .font(.title2).offset(x: -60, y:0)
-                   
-                    
-                    
-                        Text("필요합니다")
-                            .font(.title2)
-                            .offset(x: -50, y:0)
-                    }
-                }
-                
-                List {
-
-                    
-                    NavigationLink(
-                        destination: RuleView(),
-                        label: {
-                            Text("기본 방침")
-                        })
-                    
-                    
-            
-                }
-            }
-            
-        }
-        }
+    
         
     }
         

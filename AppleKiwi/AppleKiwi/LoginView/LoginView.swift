@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @State var user: UserViewModel = UserViewModel()
     @State private var showResetPw = false
     @State private var showSignUp = false
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView{

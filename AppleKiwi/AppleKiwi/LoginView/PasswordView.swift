@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
-    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
+    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 5)
     @State private var name = Array<String>.init(repeating: "", count: 5)
     @Environment(\.presentationMode) var presentationMode
     @State var user: UserViewModel = UserViewModel()
@@ -16,6 +16,7 @@ struct PasswordView: View {
     @State private var Repeatpassword:String = ""
     @Binding var showSignUp: Bool
     @Binding var showResetPw: Bool
+    @State var fieldFocus = [false, false, false, false, false]
     var body: some View {
             VStack{
                 NavigationView{
@@ -33,58 +34,91 @@ struct PasswordView: View {
                                     Text("이름")
                                         .frame(width: 100, height: 20, alignment: .leading)
                                         .padding(.trailing, 45.0)
-                                    TextField("김아무개", text: $user.name)
-                                        .keyboardType(.default)
+                                    KitTextField (
+                                                    label: "김아무개",
+                                                    text: $user.name,
+                                                    focusable: $fieldFocus,
+                                                    returnKeyType: .next,
+                                                    tag: 0
+                                    ).keyboardType(.default)
                                         .textFieldStyle(.automatic)
                                         .frame( height: 20, alignment: .leading)
                                         .submitLabel(.next)
+                                    
+                                        
                                         
                                 }
                                 HStack{
                                     Text("닉네임")
                                         .frame(width: 100, height: 20, alignment: .leading)
                                         .padding(.trailing, 45.0)
-                                    TextField("Any", text: $user.nickname)
-                                        .keyboardType(.default)
+                                    KitTextField (
+                                                    label: "Any",
+                                                    text: $user.nickname,
+                                                    focusable: $fieldFocus,
+                                                    returnKeyType: .next,
+                                                    tag: 1
+                                    ).keyboardType(.default)
                                         .textFieldStyle(.automatic)
                                         .frame( height: 20, alignment: .leading)
                                         .submitLabel(.next)
+                                    
                                 }
                                 HStack{
                                     Text("이메일")
                                         .frame(width: 100, height: 20, alignment: .leading)
                                         .padding(.trailing, 45.0)
-                                    TextField("kim22@pos.idserve.net", text: $user.email)
-                                        .keyboardType(.emailAddress)
-                                        .textFieldStyle(.automatic)
-                                        .frame( height: 20, alignment: .leading)
-                                        .submitLabel(.next)
+                                    KitTextField (
+                                                    label: "kim22@pos.idserve.net",
+                                                    text: $user.email,
+                                                    focusable: $fieldFocus,
+                                                    returnKeyType: .next,
+                                                    tag: 2
+                                                    
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.next)
+                                    
                                 }
                                 HStack{
                                     Text("비밀번호")
                                         .frame(width: 100, height: 20, alignment: .leading)
                                         .padding(.trailing, 45.0)
-                                    SecureField("password", text: $user.password)
-                                        .keyboardType(.default)
-                                        .textFieldStyle(.automatic)
-                                        .frame( height: 20, alignment: .leading)
-                                        .submitLabel(.next)
+                                    KitTextField (
+                                                    label: "password",
+                                                    text: $user.password,
+                                                    focusable: $fieldFocus,
+                                                    returnKeyType: .next,
+                                                    tag: 3
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.next)
                                 }
                                 HStack{
                                     Text("비밀번호 확인")
                                         .frame(width: 100, height: 20, alignment: .leading)
                                         .padding(.trailing, 45.0)
-                                    SecureField("password", text: $Repeatpassword)
-                                        .keyboardType(.default)
-                                        .textFieldStyle(.automatic)
-                                        .frame( height: 20, alignment: .leading)
-                                        .onSubmit {
-                                            if(user.password == Repeatpassword){
-                                               VerifyPassword = true
-                                            }
+                                    KitTextField (
+                                                    label: "password",
+                                                    text: $Repeatpassword,
+                                                    focusable: $fieldFocus,
+                                                    returnKeyType: .done,
+                                                    tag: 4
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.done)
+                                    .onSubmit {
+                                        if(user.password == Repeatpassword){
+                                           VerifyPassword = true
                                         }
-                                        .submitLabel(.done)
-                                        .background(GeometryGetter(rect: $kGuardian.rects[0]))
+                                    }
+                                    
                                 }
                                 
                         

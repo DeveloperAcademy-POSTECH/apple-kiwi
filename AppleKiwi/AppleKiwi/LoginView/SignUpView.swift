@@ -37,6 +37,7 @@ struct SignUpView: View {
                             .frame(width: 230, height: 40, alignment: .leading)
                             .submitLabel(.next)
                             .onSubmit {
+                                
                                 validationEmail()
                             }
                         Spacer()

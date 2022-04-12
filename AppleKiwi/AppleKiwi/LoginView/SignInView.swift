@@ -13,7 +13,6 @@ struct SignInView: View {
     @State var user: UserViewModel = UserViewModel()
     @Binding var showSignUp: Bool
     @Binding var showResetPw: Bool
-    @Binding var action:LoginView.Action?
     
     var body: some View {
         VStack {
@@ -67,7 +66,7 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(showSignUp: .constant(false), showResetPw: .constant(false), action: .constant(.signUp))
+        SignInView(showSignUp: .constant(false), showResetPw: .constant(false))
     }
 }
 

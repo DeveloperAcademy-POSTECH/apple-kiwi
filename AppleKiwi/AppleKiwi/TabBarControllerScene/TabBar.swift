@@ -23,11 +23,10 @@ struct TabBar: View {
                 }.tag(0)
 
             VStack(){
-                Text("준비중 !!").font(.title)
-                Image("test")
+                Image("worker kiwi")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:300)
+                    .frame(width:370)
                 
             }.tabItem{
                 Image(systemName: "book")

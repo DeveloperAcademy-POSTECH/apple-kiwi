@@ -19,6 +19,7 @@
 		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
 		83BDC5D92805BDDD00EF960F /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDC5D82805BDDD00EF960F /* GeometryGetter.swift */; };
 		83BDC5DB2805BE2300EF960F /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDC5DA2805BE2300EF960F /* KeyboardGuardian.swift */; };
+		83BDC5DD2805C36E00EF960F /* KitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDC5DC2805C36E00EF960F /* KitTextField.swift */; };
 		83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */; };
 		83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762F027FD685100FDC8D0 /* ContentView.swift */; };
 		83C762F327FD685200FDC8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C762F227FD685200FDC8D0 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		83BDC5D82805BDDD00EF960F /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		83BDC5DA2805BE2300EF960F /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		83BDC5DC2805C36E00EF960F /* KitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitTextField.swift; sourceTree = "<group>"; };
 		83C762EB27FD685100FDC8D0 /* AppleKiwi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleKiwi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiApp.swift; sourceTree = "<group>"; };
 		83C762F027FD685100FDC8D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				2004978827FD717000B217AC /* UserViewModel.swift */,
 				83BDC5D82805BDDD00EF960F /* GeometryGetter.swift */,
 				83BDC5DA2805BE2300EF960F /* KeyboardGuardian.swift */,
+				83BDC5DC2805C36E00EF960F /* KitTextField.swift */,
 			);
 			path = AppleKiwi;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				83BDC5DB2805BE2300EF960F /* KeyboardGuardian.swift in Sources */,
 				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				322783FA2805698F00E47918 /* LoggedOutMyPageView.swift in Sources */,
+				83BDC5DD2805C36E00EF960F /* KitTextField.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,

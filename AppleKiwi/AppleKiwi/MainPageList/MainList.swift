@@ -27,7 +27,7 @@ struct MainList : View {
                 
                 List {
                     
-                    Section(header: Text("최신리스트")){
+                    /*Section(header: Text("최신리스트")){
                         ScrollView(.horizontal) {
                             HStack {
                                 ForEach(users, id: \.id) {user in
@@ -39,15 +39,26 @@ struct MainList : View {
                                 }
                             }
                         }
-                    }
+                    }*/
                     Section(header: Text("전체리스트")){
-                        
-                        ForEach(users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
+                        NavigationLink(destination:ReadWikiView(user : $userOne)){
+                            Text("Leeo")
+                        }
+                        NavigationLink(destination:ReadWikiView(user : $userTwo)){
+                            Text("Lisa")
+                        }
+                        NavigationLink(destination:ReadWikiView(user : $userThree)){
+                            Text("Seven")
+                        }
+                        NavigationLink(destination:ReadWikiView(user : $userFour)){
+                            Text("Coo")
+                        }
+                       /* ForEach(users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
                         { user in
                             NavigationLink(destination: ReadWikiView(user: user)) {
                                 Text("\(user.name)")
                             }
-                        }
+                        }*/
                         
                     }
              

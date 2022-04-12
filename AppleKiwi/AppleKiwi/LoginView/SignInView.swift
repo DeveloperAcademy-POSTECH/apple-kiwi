@@ -11,7 +11,8 @@ let lightGray = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
 struct SignInView: View {
     @State var user: UserViewModel = UserViewModel()
-    @Binding var showSheet: Bool
+    @Binding var showSignUp: Bool
+    @Binding var showResetPw: Bool
     @Binding var action:LoginView.Action?
     
     var body: some View {
@@ -43,12 +44,22 @@ struct SignInView: View {
             
             // 비밀번호 찾기 버튼
             Button(action: {
-                showSheet.toggle()
+                showResetPw.toggle()
             }){
                 FindPasswordButton()
             }
-            .sheet(isPresented: $showSheet) {
+            .sheet(isPresented: $showResetPw) {
                 PasswordView()
+            }
+            
+            // 비밀번호 찾기 버튼
+            Button(action: {
+                showSignUp.toggle()
+            }){
+                LoginButton()
+            }
+            .sheet(isPresented: $showSignUp) {
+                SignUpView()
             }
         }
     }
@@ -56,7 +67,7 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(showSheet: .constant(false), action: .constant(.signUp))
+        SignInView(showSignUp: .constant(false), showResetPw: .constant(false), action: .constant(.signUp))
     }
 }
 
@@ -64,6 +75,17 @@ struct SignInView_Previews: PreviewProvider {
 struct FindPasswordButton: View {
     var body: some View {
         Text("비밀번호를 잊어버리셨나요?")
+            .font(.system(size:15, weight: .semibold))
+            .foregroundColor(.gray)
+            .padding()
+            .frame(width: 200, height: 30, alignment: .center)
+    }
+}
+
+// 비밀번호 찾기 버튼 스타일
+struct LoginButton: View {
+    var body: some View {
+        Text("아직 회원이 아니신가요?")
             .font(.system(size:15, weight: .semibold))
             .foregroundColor(.gray)
             .padding()

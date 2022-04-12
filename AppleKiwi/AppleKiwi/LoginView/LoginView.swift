@@ -14,7 +14,7 @@ struct LoginView: View {
     }
     
     @State var user: UserViewModel = UserViewModel()
-    @State private var showSheet = false
+    @State private var showResetPw = false
     @State private var showSignUp = false
     @State private var action: Action?
     
@@ -27,28 +27,28 @@ struct LoginView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 200)
                     .offset(y:-10)
-                SignInView(showSheet: $showSheet, action: $action)
+                SignInView(showSignUp: $showSignUp, showResetPw: $showResetPw, action: $action)
                     .padding()
                     .frame(width: 350.0)
                     .offset(y: -50)
                     
             }
-            .navigationTitle("로그인")
             // 회원가입 툴바 버튼
-            .toolbar {
-                Button (action:  {
-                    showSignUp.toggle()
-                }, label: {
-                    Text("회원가입")
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("navigation bar kiwi"))
-
-                })
-                .sheet(isPresented: $showSignUp) {
-                    SignUpView(showSignUp: $showSignUp)
-                }
-            }
+//            .toolbar {
+//                Button (action:  {
+//                    showSignUp.toggle()
+//                }, label: {
+//                    Text("회원가입")
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color("navigation bar kiwi"))
+//
+//                })
+//                .sheet(isPresented: $showSignUp) {
+//                    SignUpView(showSignUp: $showSignUp)
+//                }
+//            }
         }
+        .navigationTitle("로그인")
     }
 }
 

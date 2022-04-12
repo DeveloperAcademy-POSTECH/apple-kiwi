@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PasswordView: View {
-    
+    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
+    @State private var name = Array<String>.init(repeating: "", count: 5)
     @Environment(\.presentationMode) var presentationMode
     @State var user: UserViewModel = UserViewModel()
     @State private var VerifyPassword = false
@@ -19,104 +20,97 @@ struct PasswordView: View {
             VStack{
                 NavigationView{
                     VStack(){
-                        List{
-                        ScrollView(){
-                            Image("kiwi")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 250,
-                                       height: 250,
-                                       alignment: .topLeading)
-                                .clipShape(Circle()).padding()
-                            HStack{
-                                Text("이름")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                TextField("김아무개", text: $user.name)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                            }
-                            HStack{
-                                Text("닉네임")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                TextField("Any", text: $user.nickname)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                            }
-                            HStack{
-                                Text("아이디")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                TextField("kim22", text: $user.ID)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                                Spacer()
-                                Button(action: {
-                                }){
-                                    Text("중복확인")
-                                        .frame(width: 60, height: 20, alignment: .center)
-                                        .foregroundColor(Color.white)
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Container@*/VStack/*@END_MENU_TOKEN@*/ {
+                            List{
+                                Image("kiwi")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 250,
+                                           height: 250,
+                                           alignment: .topLeading)
+                                    .clipShape(Circle()).padding()
+                                HStack{
+                                    Text("이름")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    TextField("김아무개", text: $user.name)
+                                        .keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                        
                                 }
-                                .buttonStyle(.bordered)
-                                .background(Color.gray)
-                                .cornerRadius(10)
-                            }
-                            HStack{
-                                Text("이메일")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                TextField("kim22@pos.idserve.net", text: $user.email)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                            }
-                            HStack{
-                                Text("비밀번호")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                SecureField("password", text: $user.password)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                            }
-                            HStack{
-                                Text("비밀번호 확인")
-                                    .frame(width: 100, height: 20, alignment: .leading)
-                                    .padding(.trailing, 45.0)
-                                SecureField("password", text: $Repeatpassword)
-                                    .keyboardType(.default)
-                                    .textFieldStyle(.automatic)
-                                    .frame( height: 20, alignment: .leading)
-                                    .onSubmit {
-                                        if(user.password == Repeatpassword){
-                                           VerifyPassword = true
+                                HStack{
+                                    Text("닉네임")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    TextField("Any", text: $user.nickname)
+                                        .keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                }
+                                HStack{
+                                    Text("이메일")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    TextField("kim22@pos.idserve.net", text: $user.email)
+                                        .keyboardType(.emailAddress)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                }
+                                HStack{
+                                    Text("비밀번호")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    SecureField("password", text: $user.password)
+                                        .keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                }
+                                HStack{
+                                    Text("비밀번호 확인")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    SecureField("password", text: $Repeatpassword)
+                                        .keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .onSubmit {
+                                            if(user.password == Repeatpassword){
+                                               VerifyPassword = true
+                                            }
                                         }
-                                    }
+                                        .submitLabel(.done)
+                                        .background(GeometryGetter(rect: $kGuardian.rects[0]))
+                                }
+                                
+                        
+        //                .disabled(!VerifyPassword)
                             }
-                            Spacer(minLength: 60)
-                            Button("회원가입") {
-                                presentationMode.wrappedValue.dismiss()
+                            .listStyle(.grouped)
+                            HStack {
+                                Spacer()
+                                Button("회원가입") {
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                                .frame(width: 150, height: 40)
+                                .font(.system(size: 20).weight(.light))
+                                .foregroundColor(.white)
+                                .buttonStyle(.plain)
+                                .background(Color("button kiwi"))
+                                .cornerRadius(10)
+                                Spacer()
                             }
-                            .frame(width: 150, height: 40)
-                            .font(.footnote)
-                            .foregroundColor(.white)
-                            .buttonStyle(.plain)
-                            .background(Color("button kiwi"))
-                            .cornerRadius(10)
-                    }
-                    .listStyle(.grouped)
-                    
-    //                .disabled(!VerifyPassword)
-                }
+                            
+                        }
                         
                     }
                 .navigationBarTitle(Text("회원가입"))
             }
-        }
+            }
         
     }
 }

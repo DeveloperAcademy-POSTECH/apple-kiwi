@@ -9,11 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-
-
-        MyPageView()
-
-
+        MainList()
     }
 }
 

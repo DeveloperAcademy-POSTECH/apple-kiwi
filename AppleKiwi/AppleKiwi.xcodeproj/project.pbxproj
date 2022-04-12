@@ -24,11 +24,7 @@
 		9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655D2800191700C6B562 /* SearchBar.swift */; };
 		9AD265602800194900C6B562 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655F2800194900C6B562 /* MainList.swift */; };
 		9AE3FEEE280401AF0073781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3FEED280401AF0073781D /* User.swift */; };
-		F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163927FEB49900AC6744 /* WikiModel.swift */; };
-		F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */; };
-		F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */; };
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
-		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
 		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
 /* End PBXBuildFile section */
@@ -71,9 +67,6 @@
 		9AD2655D2800191700C6B562 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		9AD2655F2800194900C6B562 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		9AE3FEED280401AF0073781D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F8C1163927FEB49900AC6744 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
-		F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWikiContentView.swift; sourceTree = "<group>"; };
-		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
 		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
 		F8FB0409280024BB00026CAD /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
@@ -84,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,11 +200,8 @@
 		F8E7FBA427FD6DA900CF3F7E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */,
 				F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */,
 				F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */,
-				F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */,
-				F8C1163927FEB49900AC6744 /* WikiModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,7 +223,6 @@
 			);
 			name = AppleKiwi;
 			packageProductDependencies = (
-				F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */,
 			);
 			productName = AppleKiwi;
 			productReference = 83C762EB27FD685100FDC8D0 /* AppleKiwi.app */;
@@ -309,7 +297,6 @@
 			);
 			mainGroup = 83C762E227FD685100FDC8D0;
 			packageReferences = (
-				F8E7FBA727FD6F3F00CF3F7E /* XCRemoteSwiftPackageReference "MarkdownView" */,
 			);
 			productRefGroup = 83C762EC27FD685100FDC8D0 /* Products */;
 			projectDirPath = "";
@@ -359,10 +346,8 @@
 				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
-				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
-				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,
@@ -370,7 +355,6 @@
 				9AE3FEEE280401AF0073781D /* User.swift in Sources */,
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
 				2004978B27FD72FD00B217AC /* SignInView.swift in Sources */,
-				F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleKiwi/Preview Content\"";
+				DEVELOPMENT_TEAM = 9G3C2CYQ6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -557,6 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleKiwi/Preview Content\"";
+				DEVELOPMENT_TEAM = 9G3C2CYQ6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -689,25 +675,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F8E7FBA727FD6F3F00CF3F7E /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/keitaoouchi/MarkdownView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F8E7FBA727FD6F3F00CF3F7E /* XCRemoteSwiftPackageReference "MarkdownView" */;
-			productName = MarkdownView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83C762E327FD685100FDC8D0 /* Project object */;
 }

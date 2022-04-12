@@ -9,16 +9,15 @@ import SwiftUI
 
 struct MainList : View {
     @State var text : String = ""
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    // 유저 데이터
     @State var userOne = User.userOne
     @State var userTwo = User.userTwo
     @State var userThree = User.userThree
     @State var userFour = User.userFour
 
     var body :some View{
-  
-
-      
         NavigationView{
             VStack{
                 
@@ -26,8 +25,8 @@ struct MainList : View {
                 searchBar(text: self.$text)
                 
                 List {
-                    
-                    /*Section(header: Text("최신리스트")){
+                    /*
+                    Section(header: Text("최신리스트")){
                         ScrollView(.horizontal) {
                             HStack {
                                 ForEach(users, id: \.id) {user in
@@ -39,7 +38,8 @@ struct MainList : View {
                                 }
                             }
                         }
-                    }*/
+                    }
+                    */
                     Section(header: Text("전체리스트")){
                         NavigationLink(destination:ReadWikiView(user : $userOne)){
                             Text("Leeo")

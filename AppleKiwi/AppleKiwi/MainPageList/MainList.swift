@@ -9,12 +9,11 @@ import SwiftUI
 
 struct MainList : View {
     @State var text : String = ""
-    @State var users = [User(name: "Leeo",content: "LeeoContent"),
-                 User(name: "Lisa", content:"LisaContent"),
-                 User(name: "Sven",content:"SvenContent"),
-                 User(name: "Coo", content:"CooContent")
-                     
-    ]
+    
+    @State var userOne = User.userOne
+    @State var userTwo = User.userTwo
+    @State var userThree = User.userThree
+    @State var userFour = User.userFour
 
     var body :some View{
   

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State var user: UserViewModel = UserViewModel()
     @State private var VerifyPassword = false
     @State private var Repeatpassword:String = ""
@@ -102,7 +103,7 @@ struct PasswordView: View {
     //                .disabled(!VerifyPassword)
                 }
                         Button("회원가입") {
-                            showSignUp.toggle()
+                            presentationMode.wrappedValue.dismiss()
                         }
                         .frame(width: 150, height: 40)
                         .font(.footnote)

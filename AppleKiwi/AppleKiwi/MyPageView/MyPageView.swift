@@ -15,6 +15,10 @@ struct MyPageView: View {
                 Text("마이페이지")
                     .padding().font(.title)
                 Spacer()
+                Button("로그아웃") {
+                    
+                }
+                .padding()
             }.background(.white)
             
             HStack{ Image("test")

@@ -13,15 +13,14 @@ extension Color {
 
 
 struct TabBar: View {
-    @State private var selectedTab = "One"
+    @State private var selectedTab = 0
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
            MainList()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("홈")
-                }
-                .tag("One")
+                }.tag(0)
 
             VStack(){
                 Text("준비중 !!").font(.title)
@@ -33,17 +32,13 @@ struct TabBar: View {
             }.tabItem{
                 Image(systemName: "book")
                 Text("도감")
-            }
+            }.tag(1)
             
             MyPageView()
-                .onTapGesture {
-                    selectedTab = "Three"
-                }
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("마이페이지")
-                }
-                .tag("Three")
+                }.tag(2)
                 
         }
         .accentColor(.tabColor)

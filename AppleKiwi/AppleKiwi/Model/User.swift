@@ -8,6 +8,22 @@
 import Foundation
 import SwiftUI
 
+
+struct User: Identifiable, Hashable {
+    var id = UUID()
+    
+    var name: String
+    var content: String
+    
+    init(name: String, content: String) {
+        self.name = name
+        
+        self.content=content
+       
+        
+    }
+}
+/*
 struct User: Identifiable {
     var id = UUID()
     var name: String
@@ -82,3 +98,4 @@ struct User: Identifiable {
     [Email 📬](mailto:hallo@dannyverpoort.nl)
     """)
 }
+*/

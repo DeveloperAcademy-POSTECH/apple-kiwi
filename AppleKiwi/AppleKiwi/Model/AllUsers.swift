@@ -7,11 +7,27 @@
 
 import Foundation
 
-class UsersViewModel: ObservableObject {
-  static var samples = [
-      User(name: "Leeo", content: "LeeoContent"),
-                           User(name: "Lisa", content: "LisaContent"),
-                           User(name: "Seven", content: "SevenContent"),
-                          User(name: "Coo", content: "CooContent")
-    ]
+class AllUsers: ObservableObject {
+    
+    @Published var Users: [User] = []
+    
+    init(){
+        self.demo()
+    }
+    
+    func demo() -> [User] {
+        //let users: [User] = []
+        
+        Users.append(User(name: "Leeo", content: "LeeoContent"))
+        Users.append(User(name: "Lisa", content: "LisaContent"))
+        Users.append(User(name: "Seven", content: "SevenContent"))
+        Users.append(User(name: "Coo", content: "CooContent"))
+        
+        return Users
+
+    }
+    
 }
+
+
+

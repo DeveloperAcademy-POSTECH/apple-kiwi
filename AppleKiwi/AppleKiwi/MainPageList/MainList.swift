@@ -13,34 +13,21 @@ import SwiftUI
 struct MainList : View {
     @State var text : String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    @StateObject fileprivate var viewModel = UsersViewModel()
-    // 유저 데이터
-    @State var userOne = User.userOne
-    @State var userTwo = User.userTwo
-    @State var userThree = User.userThree
-    @State var userFour = User.userFour
-
-    struct Book: Identifiable {
-      var id = UUID()
-      var title: String
-      var author: String
-      var isbn: String
-      var pages: Int
-      var isRead: Bool = false
-    }
+    @StateObject var users = AllUsers()
+    @State var showAdd = false
 
     
-    
+   
     
     var body :some View{
+    
         NavigationView{
             VStack{
                 
                 //검색창에서
                 searchBar(text: self.$text)
-                
-                List {
+                VStack {
+                    List {
                     /*
                     Section(header: Text("최신리스트")){
                         ScrollView(.horizontal) {
@@ -56,32 +43,22 @@ struct MainList : View {
                         }
                     }
                     */
-                    Section(header: Text("전체리스트"))
-                    {List{
-                        NavigationLink(destination:ReadWikiView(user : $userOne)){
-                            Text("Leeo")
-                        }
-                        NavigationLink(destination:ReadWikiView(user : $userTwo)){
-                            Text("Lisa")
-                        }
-                        NavigationLink(destination:ReadWikiView(user : $userThree)){
-                            Text("Seven")
-                        }
-                        NavigationLink(destination:ReadWikiView(user : $userFour)){
-                            Text("Coo")
-                         }}
-                        /*ForEach(viewModel.users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
-                        { user in
-                            NavigationLink(destination: ReadWikiView().environmentObject(user)) {
-                                Text("\(user.name)")
-                            }
-                        }*/
-                        
-                    }
-             
-                    
-                }.listStyle(.grouped)
-                
+                                    
+                                        Section(header: Text("전체리스트"))
+                                        {
+                                            ForEach(Array(users.Users.enumerated().filter({"\($0)".contains(self.text) || self.text.isEmpty})), id: \.1) { i, user in
+                                                NavigationLink( destination: ReadWikiView(user:  $users.Users[i]))
+                                                {
+                                                    Text("\(user.name)")
+                                                }
+                                            }
+                                        }
+                                    }.listStyle(.grouped)
+                             
+                                
+                }
+                            
+              
                 
             }.navigationBarHidden(true)
        }

@@ -23,6 +23,7 @@ struct MyPageView: View {
                         Spacer()
                         NavigationLink(
                             destination: LoggedOutMyPageView().navigationBarHidden(true),
+                            
                             label: {
                                 Text("로그아웃").foregroundColor(Color.navKiwi)
                             })
@@ -69,7 +70,7 @@ struct MyPageView: View {
                             
                         }
                     }
-                }
+                }.navigationBarHidden(true)
                 
             }
             

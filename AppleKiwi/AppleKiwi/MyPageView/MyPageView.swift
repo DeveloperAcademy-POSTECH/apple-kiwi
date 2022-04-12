@@ -38,9 +38,9 @@ struct MyPageView: View {
                             .frame(width: 100)
                             .clipShape(Circle()).padding()
                         
-                        Text("changBro chaleea22@pos.idserve.net")
+                        Text("changBro\nchaleea22@pos.idserve.net")
                             .font(.body)
-                            .frame(minWidth: 0, idealWidth: 100, maxWidth: 400, minHeight: 0, maxHeight: 100, alignment: .center)
+                            .frame(alignment: .center)
                         
                         
                         

@@ -16,17 +16,18 @@ class AllUsers: ObservableObject {
     }
     
     func demo() -> [User] {
-        //let users: [User] = []
+        let users: [User] = []
         
         Users.append(User(name: "Leeo", content: "LeeoContent"))
         Users.append(User(name: "Lisa", content: "LisaContent"))
         Users.append(User(name: "Seven", content: "SevenContent"))
         Users.append(User(name: "Coo", content: "CooContent"))
         
-        return Users
-
+     
+        return users
     }
     
+   
 }
 
 

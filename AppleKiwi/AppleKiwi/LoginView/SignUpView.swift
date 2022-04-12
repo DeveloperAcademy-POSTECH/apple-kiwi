@@ -12,6 +12,8 @@ struct SignUpView: View {
     @State var verify:String = ""
     @State private var EnterVerify = false
     @State private var EmailVerify = false
+    @Binding var showSignUp: Bool
+    @Binding var showResetPw: Bool
     var body: some View {
         NavigationView{
             VStack {
@@ -69,7 +71,7 @@ struct SignUpView: View {
                     .buttonStyle(.bordered)
                     .background(Color("button kiwi2"))
                     .cornerRadius(10)
-                    NavigationLink(destination: PasswordView().navigationBarHidden(true), label:{ Text("인증번호 입력")
+                    NavigationLink(destination: PasswordView(showSignUp: $showSignUp, showResetPw: $showResetPw).navigationBarHidden(true), label:{ Text("인증번호 입력")
                             .frame(width: 130, height: 20, alignment: .center
                     )})
                     .font(.footnote)
@@ -92,7 +94,7 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(showSignUp: .constant(false), showResetPw: .constant(false))
             .previewInterfaceOrientation(.portrait)
     }
 }

@@ -11,6 +11,8 @@ struct PasswordView: View {
     @State var user: UserViewModel = UserViewModel()
     @State private var VerifyPassword = false
     @State private var Repeatpassword:String = ""
+    @Binding var showSignUp: Bool
+    @Binding var showResetPw: Bool
     var body: some View {
             VStack{
                 NavigationView{
@@ -99,7 +101,15 @@ struct PasswordView: View {
                     
     //                .disabled(!VerifyPassword)
                 }
-                        
+                        Button("회원가입") {
+                            showSignUp.toggle()
+                        }
+                        .frame(width: 150, height: 40)
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                        .buttonStyle(.plain)
+                        .background(Color("button kiwi"))
+                        .cornerRadius(10)
                     }
                 .navigationBarTitle(Text("회원가입"))
             }
@@ -110,6 +120,6 @@ struct PasswordView: View {
 
 struct PasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordView()
+        PasswordView(showSignUp: .constant(false), showResetPw: .constant(false))
     }
 }

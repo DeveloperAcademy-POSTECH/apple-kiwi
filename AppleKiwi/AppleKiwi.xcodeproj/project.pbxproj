@@ -21,6 +21,7 @@
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
+		9A7D68D228056A1B00EDA6F8 /* AllUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D68D128056A1B00EDA6F8 /* AllUsers.swift */; };
 		9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655D2800191700C6B562 /* SearchBar.swift */; };
 		9AD265602800194900C6B562 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655F2800194900C6B562 /* MainList.swift */; };
 		9AE3FEEE280401AF0073781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3FEED280401AF0073781D /* User.swift */; };
@@ -64,6 +65,7 @@
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A7D68D128056A1B00EDA6F8 /* AllUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsers.swift; sourceTree = "<group>"; };
 		9AD2655D2800191700C6B562 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		9AD2655F2800194900C6B562 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		9AE3FEED280401AF0073781D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE3FEED280401AF0073781D /* User.swift */,
+				9A7D68D128056A1B00EDA6F8 /* AllUsers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */,
 				838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */,
 				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
+				9A7D68D228056A1B00EDA6F8 /* AllUsers.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
 				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,

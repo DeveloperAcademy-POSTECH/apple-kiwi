@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReadWikiView: View {
     @State private var isShowingSheet: Bool = false
+    //@EnvironmentObject var user: User
     @Binding var user: User
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     

@@ -7,16 +7,32 @@
 
 import SwiftUI
 
+
+
+
 struct MainList : View {
     @State var text : String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @StateObject fileprivate var viewModel = UsersViewModel()
     // 유저 데이터
     @State var userOne = User.userOne
     @State var userTwo = User.userTwo
     @State var userThree = User.userThree
     @State var userFour = User.userFour
 
+    struct Book: Identifiable {
+      var id = UUID()
+      var title: String
+      var author: String
+      var isbn: String
+      var pages: Int
+      var isRead: Bool = false
+    }
+
+    
+    
+    
     var body :some View{
         NavigationView{
             VStack{
@@ -40,7 +56,8 @@ struct MainList : View {
                         }
                     }
                     */
-                    Section(header: Text("전체리스트")){
+                    Section(header: Text("전체리스트"))
+                    {List{
                         NavigationLink(destination:ReadWikiView(user : $userOne)){
                             Text("Leeo")
                         }
@@ -52,10 +69,10 @@ struct MainList : View {
                         }
                         NavigationLink(destination:ReadWikiView(user : $userFour)){
                             Text("Coo")
-                        }
-                       /* ForEach(users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
+                         }}
+                        /*ForEach(viewModel.users.filter({"\($0)".contains(self.text) || self.text.isEmpty}), id: \.id)
                         { user in
-                            NavigationLink(destination: ReadWikiView(user: user)) {
+                            NavigationLink(destination: ReadWikiView().environmentObject(user)) {
                                 Text("\(user.name)")
                             }
                         }*/

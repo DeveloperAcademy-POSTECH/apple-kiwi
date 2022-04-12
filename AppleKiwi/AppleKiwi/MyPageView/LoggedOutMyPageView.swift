@@ -16,7 +16,7 @@ struct LoggedOutMyPageView: View {
                         .padding()
                         .font(.system(size: 30,
                                       weight: .bold))
-                        
+                    
                     Spacer()
                     
                     NavigationLink(
@@ -39,12 +39,12 @@ struct LoggedOutMyPageView: View {
                         .font(.title2)
                     Spacer()
                     Spacer()
-    
-
+                    
+                    
                 }
                 
                 List {
-
+                    
                     
                     NavigationLink(
                         destination: RuleView(),
@@ -53,7 +53,7 @@ struct LoggedOutMyPageView: View {
                         })
                     
                     
-            
+                    
                 }
             }.navigationBarHidden(true)
             

@@ -18,7 +18,7 @@ struct PasswordView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250,
-                           height: 300,
+                           height: 250,
                            alignment: .topLeading)
                     .clipShape(Circle()).padding()
                 List{
@@ -94,9 +94,16 @@ struct PasswordView: View {
                     }
                 }
                 .listStyle(.grouped)
-                NavigationLink(destination: MyPageView().navigationBarHidden(true),
+                NavigationLink(destination: LoginView().navigationBarHidden(true),
                                label: {
-                    Text("회원가입")
+                    Button(action: {
+                    }, label: {
+                        Text("회원가입")
+                            .foregroundColor(.white)
+                    })
+                    .buttonStyle(.bordered)
+                    .background(Color("button kiwi"))
+                    .cornerRadius(10)
                 })
 //                .disabled(!VerifyPassword)
             }

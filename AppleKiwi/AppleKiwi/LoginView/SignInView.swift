@@ -57,6 +57,7 @@ struct SignInView: View {
             }){
                 LoginButton()
             }
+            .offset(y: -10)
             .sheet(isPresented: $showSignUp) {
                 SignUpView()
             }

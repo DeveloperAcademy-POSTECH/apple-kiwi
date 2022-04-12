@@ -30,6 +30,7 @@ struct LoginView: View {
             }
         }
         .navigationTitle("로그인")
+        .accentColor(.black)
     }
 }
 

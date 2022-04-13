@@ -10,7 +10,7 @@ import SwiftUI
 struct PasswordView: View {
     @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
     @State private var name = Array<String>.init(repeating: "", count: 5)
-    @Environment(\.presentationMode) var presentationMode
+    @Environment (\.signInRoot) private var signInRoot
     @State var user: UserViewModel = UserViewModel()
     @State private var VerifyPassword = false
     @State private var Repeatpassword:String = ""
@@ -160,7 +160,9 @@ struct PasswordView: View {
                             HStack {
                                 Spacer()
                                 Button("회원가입") {
-                                    presentationMode.wrappedValue.dismiss()
+                                    signInRoot.forEach {
+                                        $0.wrappedValue = false
+                                    }
                                 }
                                 .frame(width: 150, height: 40)
                                 .font(.system(size: 20).weight(.light))

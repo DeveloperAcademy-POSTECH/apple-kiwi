@@ -27,6 +27,7 @@
 		9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655D2800191700C6B562 /* SearchBar.swift */; };
 		9AD265602800194900C6B562 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655F2800194900C6B562 /* MainList.swift */; };
 		9AE3FEEE280401AF0073781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3FEED280401AF0073781D /* User.swift */; };
+		F869C72E2805CDA1004A4BBD /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F869C72D2805CDA1004A4BBD /* MarkdownView */; };
 		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
 		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F869C72E2805CDA1004A4BBD /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +234,7 @@
 			);
 			name = AppleKiwi;
 			packageProductDependencies = (
+				F869C72D2805CDA1004A4BBD /* MarkdownView */,
 			);
 			productName = AppleKiwi;
 			productReference = 83C762EB27FD685100FDC8D0 /* AppleKiwi.app */;
@@ -306,6 +309,7 @@
 			);
 			mainGroup = 83C762E227FD685100FDC8D0;
 			packageReferences = (
+				F869C72C2805CDA1004A4BBD /* XCRemoteSwiftPackageReference "MarkdownView" */,
 			);
 			productRefGroup = 83C762EC27FD685100FDC8D0 /* Products */;
 			projectDirPath = "";
@@ -687,6 +691,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F869C72C2805CDA1004A4BBD /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/keitaoouchi/MarkdownView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F869C72D2805CDA1004A4BBD /* MarkdownView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F869C72C2805CDA1004A4BBD /* XCRemoteSwiftPackageReference "MarkdownView" */;
+			productName = MarkdownView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83C762E327FD685100FDC8D0 /* Project object */;
 }

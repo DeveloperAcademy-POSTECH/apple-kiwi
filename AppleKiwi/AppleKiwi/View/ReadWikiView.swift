@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownView
 
 struct ReadWikiView: View {
     @State private var isShowingSheet: Bool = false
@@ -15,8 +16,6 @@ struct ReadWikiView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-      
-       
        ScrollView {
             VStack {
                 HStack {
@@ -26,8 +25,9 @@ struct ReadWikiView: View {
                     Spacer()
                 }.padding()
                 Divider()
-                Text(user.content)
-                    .padding()
+//                Text(user.content)
+//                    .padding()
+                MarkdownUI(body: user.content)
                 Spacer()
             }
         }

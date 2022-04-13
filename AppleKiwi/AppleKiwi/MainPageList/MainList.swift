@@ -16,16 +16,9 @@ struct MainList : View {
    // @StateObject var users = AllUsers()
 
     
-    @State var users: [User] = [User(name: "Leeo", content: "LeeoContent"),
-                                User(name: "Lisa", content: "LisaContent"),
-                                User(name: "Seven", content: "SevenContent"),
-                                User(name: "Coo", content: "CooContent")]
+    @State var users = User.sampleUsers
 
 
-    
-  
-    
-    
     var body :some View{
         
         NavigationView{

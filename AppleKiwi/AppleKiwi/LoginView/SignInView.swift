@@ -48,7 +48,7 @@ struct SignInView: View {
                 FindPasswordButton()
             }
             .sheet(isPresented: $showResetPw) {
-                PasswordView(showSignUp: $showSignUp, showResetPw: $showResetPw)
+                ChangePasswordView()
             }
             
             // 비밀번호 찾기 버튼

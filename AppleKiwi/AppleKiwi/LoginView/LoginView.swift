@@ -30,16 +30,16 @@ struct LoginView: View {
         }
         .navigationTitle("로그인")
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading:
-                                Button(action: goBack){
+        .navigationBarItems(leading: Button(action: goBack) {
             BackButton()
-        })
-    }
-    
+            })
+        }
     func goBack() {
         self.presentationMode.wrappedValue.dismiss()
     }
 }
+
+    
 
 struct BackButton: View {
     var body: some View {

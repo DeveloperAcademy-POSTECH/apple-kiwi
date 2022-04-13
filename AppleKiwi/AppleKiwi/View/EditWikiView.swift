@@ -2,14 +2,14 @@
 //  EditWikiView.swift
 //  AppleKiwi
 //
-//  Created by 임성균 on 2022/04/06.
+//  Created by 종건 on 2022/04/13.
 //
 
 import SwiftUI
 
 struct EditWikiView: View {
     @Binding var isShowingSheet: Bool
-    @EnvironmentObject var wikiSample: WikiModel
+    @Binding var user: User
     
     var body: some View {
         VStack {
@@ -24,7 +24,7 @@ struct EditWikiView: View {
             }
             Divider()
             ScrollView(.vertical) {
-                TextEditor(text: $wikiSample.bodyText)
+                TextEditor(text: $user.content)
                     .padding()
                     .frame(height: 800)
             }

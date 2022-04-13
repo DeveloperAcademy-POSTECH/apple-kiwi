@@ -15,6 +15,7 @@ struct PasswordView: View {
     @State private var VerifyPassword = false
     @State private var Repeatpassword:String = ""
     @State var fieldFocus = [false, false, false, false, false]
+    @State var secureField:Bool  = true
     
     var body: some View {
         VStack{
@@ -87,7 +88,6 @@ struct PasswordView: View {
                                         focusable: $fieldFocus,
                                         returnKeyType: .next,
                                         tag: 2
-                                        
                                     )
                                     .keyboardType(.default)
                                     .textFieldStyle(.automatic)
@@ -111,6 +111,7 @@ struct PasswordView: View {
                                         label: "password",
                                         text: $user.password,
                                         focusable: $fieldFocus,
+                                        isSecureTextEntry: $secureField,
                                         returnKeyType: .next,
                                         tag: 3
                                     )
@@ -135,6 +136,7 @@ struct PasswordView: View {
                                         label: "password",
                                         text: $user.confirmPassword,
                                         focusable: $fieldFocus,
+                                        isSecureTextEntry: $secureField,
                                         returnKeyType: .done,
                                         tag: 4
                                     )

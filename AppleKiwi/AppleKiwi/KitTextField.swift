@@ -32,7 +32,7 @@ struct KitTextField: UIViewRepresentable {
         textField.returnKeyType = returnKeyType
         textField.autocapitalizationType = autocapitalizationType
         textField.keyboardType = keyboardType
-        textField.isSecureTextEntry = isSecureTextEntry?.wrappedValue ?? false
+        textField.isSecureTextEntry = isSecureTextEntry?.wrappedValue ?? true
         textField.textContentType = textContentType
         textField.textAlignment = .left
         

@@ -9,10 +9,28 @@ import SwiftUI
 
 let lightGray = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
+let storedEmail = "admin"
+let storedPassword = "admin"
+
+struct SignInRootKey: EnvironmentKey {
+    static let defaultValue: [Binding<Bool>] = []
+}
+
+extension EnvironmentValues {
+    var signInRoot: [Binding<Bool>] {
+        get {return self [SignInRootKey]}
+        set {return self[SignInRootKey] = newValue}
+    }
+}
+
 struct SignInView: View {
+    @Environment (\.signInRoot) private var signInRoot
     @State var user: UserViewModel = UserViewModel()
     @Binding var showSignUp: Bool
     @Binding var showResetPw: Bool
+    
+    @State var authSucceed: Bool = false
+    @State var authFail:Bool = false
     
     var body: some View {
         VStack {
@@ -33,6 +51,17 @@ struct SignInView: View {
                 .padding(.bottom, 20)
             
             // 로그인 버튼
+            // 메인 페이지에서의 상태 처리가 필요함
+            Button (action: {
+                if self.user.email == storedEmail && self.user.password == storedPassword {
+                    self.authSucceed = true
+                    self.authFail = false
+                }
+                else {
+                    self.authFail = true
+                    self.authSucceed = false
+                }
+            }) {
             Text("로그인")
                 .font(.system(size: 23, weight: .bold))
                 .foregroundColor(.white)
@@ -40,6 +69,7 @@ struct SignInView: View {
                 .frame(width: 200, height: 60)
                 .background(Color("button kiwi"))
                 .cornerRadius(10.0)
+            }.disabled(!user.isLoginComplete)
             
             // 비밀번호 찾기 버튼
             Button(action: {
@@ -60,6 +90,7 @@ struct SignInView: View {
             .offset(y: -10)
             .sheet(isPresented: $showSignUp) {
                 SignUpView(showSignUp: $showSignUp, showResetPw: $showResetPw)
+                    .environment(\.signInRoot, signInRoot + [$showSignUp])
             }
         }
     }

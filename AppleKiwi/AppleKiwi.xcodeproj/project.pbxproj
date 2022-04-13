@@ -14,6 +14,7 @@
 		320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53B827FECF2000D394F2 /* MyPageView.swift */; };
 		320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */; };
 		322783FA2805698F00E47918 /* LoggedOutMyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322783F92805698F00E47918 /* LoggedOutMyPageView.swift */; };
+		32CE4F9A2806C64F00D7825F /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE4F992806C64F00D7825F /* SplashScreenView.swift */; };
 		32F6D779280024BC00902575 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6D778280024BC00902575 /* RuleView.swift */; };
 		835E4E6A28002FE400EB80B3 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E4E6928002FE400EB80B3 /* PasswordView.swift */; };
 		838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A03F5280029EF00496AC8 /* SignUpView.swift */; };
@@ -32,7 +33,6 @@
 		9ACBC58828069D1900C395A4 /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58728069D1900C395A4 /* ReadWikiView.swift */; };
 		9ACBC58A28069D5300C395A4 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58928069D5300C395A4 /* MainList.swift */; };
 		9ACBC58D28069D6300C395A4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58C28069D6300C395A4 /* SearchBar.swift */; };
-		D1B1016B280407DF00B96122 /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B1016A280407DF00B96122 /* StartPage.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
 		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +62,7 @@
 		320E53B827FECF2000D394F2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		320E53BA27FECF5400D394F2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		322783F92805698F00E47918 /* LoggedOutMyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutMyPageView.swift; sourceTree = "<group>"; };
+		32CE4F992806C64F00D7825F /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		32F6D778280024BC00902575 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		835E4E6928002FE400EB80B3 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		838A03F5280029EF00496AC8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		9ACBC58728069D1900C395A4 /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
 		9ACBC58928069D5300C395A4 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
 		9ACBC58C28069D6300C395A4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		D1B1016A280407DF00B96122 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		F8FB0409280024BB00026CAD /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +144,14 @@
 			path = MyPageView;
 			sourceTree = "<group>";
 		};
+		32CE4F982806C63100D7825F /* SplashScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				32CE4F992806C64F00D7825F /* SplashScreenView.swift */,
+			);
+			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
 		83C762E227FD685100FDC8D0 = {
 			isa = PBXGroup;
 			children = (
@@ -167,11 +175,11 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				32CE4F982806C63100D7825F /* SplashScreenView */,
 				9ACBC58228069CA700C395A4 /* MainPageList */,
 				9ACBC58028069C8000C395A4 /* View */,
 				9ACBC57E28069C5200C395A4 /* Model */,
 				3202D61228041EE70054E508 /* TabBarControllerScene */,
-				D1B10169280407CA00B96122 /* StartPageView */,
 				320E53B727FECF0500D394F2 /* MyPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
@@ -235,14 +243,6 @@
 				9ACBC58C28069D6300C395A4 /* SearchBar.swift */,
 			);
 			path = MainPageList;
-			sourceTree = "<group>";
-		};
-		D1B10169280407CA00B96122 /* StartPageView */ = {
-			isa = PBXGroup;
-			children = (
-				D1B1016A280407DF00B96122 /* StartPage.swift */,
-			);
-			path = StartPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +386,6 @@
 				838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
-				D1B1016B280407DF00B96122 /* StartPage.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
 				9ACBC58A28069D5300C395A4 /* MainList.swift in Sources */,
 				9ACBC58628069CEE00C395A4 /* EditWikiView.swift in Sources */,
@@ -397,6 +396,7 @@
 				83BDC5DD2805C36E00EF960F /* KitTextField.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,
+				32CE4F9A2806C64F00D7825F /* SplashScreenView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
 				9ACBC58428069CBB00C395A4 /* User.swift in Sources */,

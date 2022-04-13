@@ -33,7 +33,7 @@ struct SplashScreenView: View {
                 Spacer()
                 Image("team logo").resizable().scaledToFit().frame(width:100)
             }
-        }
+        }.ignoresSafeArea()
         .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                              self.isActive = true

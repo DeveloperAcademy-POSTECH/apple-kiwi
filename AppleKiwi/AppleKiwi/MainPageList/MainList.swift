@@ -58,7 +58,7 @@ struct MainList : View {
                             }
                         }
                     }
-                }
+                }.listStyle(.grouped)
             }.navigationBarHidden(true)
         }
     }

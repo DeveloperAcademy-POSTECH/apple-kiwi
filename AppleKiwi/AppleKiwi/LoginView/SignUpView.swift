@@ -71,7 +71,7 @@ struct SignUpView: View {
                     .buttonStyle(.bordered)
                     .background(Color("button kiwi2"))
                     .cornerRadius(10)
-                    NavigationLink(destination: PasswordView(showSignUp: $showSignUp, showResetPw: $showResetPw).navigationBarHidden(true), label:{ Text("인증번호 입력")
+                    NavigationLink(destination: PasswordView().navigationBarHidden(true), label:{ Text("인증번호 입력")
                             .frame(width: 130, height: 20, alignment: .center
                     )})
                     .font(.footnote)

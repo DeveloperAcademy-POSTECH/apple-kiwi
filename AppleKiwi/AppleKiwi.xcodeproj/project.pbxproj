@@ -27,15 +27,13 @@
 		83C7630027FD685200FDC8D0 /* AppleKiwiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C762FF27FD685200FDC8D0 /* AppleKiwiTests.swift */; };
 		83C7630A27FD685200FDC8D0 /* AppleKiwiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */; };
 		83C7630C27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */; };
-		9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655D2800191700C6B562 /* SearchBar.swift */; };
-		9AD265602800194900C6B562 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2655F2800194900C6B562 /* MainList.swift */; };
+		9ACBC58428069CBB00C395A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58328069CBB00C395A4 /* User.swift */; };
+		9ACBC58628069CEE00C395A4 /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58528069CEE00C395A4 /* EditWikiView.swift */; };
+		9ACBC58828069D1900C395A4 /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58728069D1900C395A4 /* ReadWikiView.swift */; };
+		9ACBC58A28069D5300C395A4 /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58928069D5300C395A4 /* MainList.swift */; };
+		9ACBC58D28069D6300C395A4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBC58C28069D6300C395A4 /* SearchBar.swift */; };
 		D1B1016B280407DF00B96122 /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B1016A280407DF00B96122 /* StartPage.swift */; };
-		F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163927FEB49900AC6744 /* WikiModel.swift */; };
-		F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */; };
-		F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */; };
-		F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */; };
 		F8E7FBA927FD6F3F00CF3F7E /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = F8E7FBA827FD6F3F00CF3F7E /* MarkdownView */; };
-		F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */; };
 		F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB0409280024BB00026CAD /* NotificationSettingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,14 +78,12 @@
 		83C7630527FD685200FDC8D0 /* AppleKiwiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleKiwiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C7630927FD685200FDC8D0 /* AppleKiwiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITests.swift; sourceTree = "<group>"; };
 		83C7630B27FD685200FDC8D0 /* AppleKiwiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleKiwiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9AD2655D2800191700C6B562 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		9AD2655F2800194900C6B562 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		9ACBC58328069CBB00C395A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9ACBC58528069CEE00C395A4 /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
+		9ACBC58728069D1900C395A4 /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
+		9ACBC58928069D5300C395A4 /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		9ACBC58C28069D6300C395A4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D1B1016A280407DF00B96122 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
-		F8C1163927FEB49900AC6744 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
-		F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWikiContentView.swift; sourceTree = "<group>"; };
-		F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableMarkdownView.swift; sourceTree = "<group>"; };
-		F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWikiView.swift; sourceTree = "<group>"; };
-		F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWikiView.swift; sourceTree = "<group>"; };
 		F8FB0409280024BB00026CAD /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,14 +167,15 @@
 		83C762ED27FD685100FDC8D0 /* AppleKiwi */ = {
 			isa = PBXGroup;
 			children = (
+				9ACBC58228069CA700C395A4 /* MainPageList */,
+				9ACBC58028069C8000C395A4 /* View */,
+				9ACBC57E28069C5200C395A4 /* Model */,
 				3202D61228041EE70054E508 /* TabBarControllerScene */,
 				D1B10169280407CA00B96122 /* StartPageView */,
-				9AD2655C2800190000C6B562 /* MainPageList */,
 				320E53B727FECF0500D394F2 /* MyPageView */,
 				2004978C27FD75B100B217AC /* LoginView */,
 				83C762EE27FD685100FDC8D0 /* AppleKiwiApp.swift */,
 				83C762F027FD685100FDC8D0 /* ContentView.swift */,
-				F8E7FBA427FD6DA900CF3F7E /* View */,
 				83C762F227FD685200FDC8D0 /* Assets.xcassets */,
 				83C762F427FD685200FDC8D0 /* Preview Content */,
 				2004978827FD717000B217AC /* UserViewModel.swift */,
@@ -214,11 +211,28 @@
 			path = AppleKiwiUITests;
 			sourceTree = "<group>";
 		};
-		9AD2655C2800190000C6B562 /* MainPageList */ = {
+		9ACBC57E28069C5200C395A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9AD2655D2800191700C6B562 /* SearchBar.swift */,
-				9AD2655F2800194900C6B562 /* MainList.swift */,
+				9ACBC58328069CBB00C395A4 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9ACBC58028069C8000C395A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9ACBC58528069CEE00C395A4 /* EditWikiView.swift */,
+				9ACBC58728069D1900C395A4 /* ReadWikiView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9ACBC58228069CA700C395A4 /* MainPageList */ = {
+			isa = PBXGroup;
+			children = (
+				9ACBC58928069D5300C395A4 /* MainList.swift */,
+				9ACBC58C28069D6300C395A4 /* SearchBar.swift */,
 			);
 			path = MainPageList;
 			sourceTree = "<group>";
@@ -229,18 +243,6 @@
 				D1B1016A280407DF00B96122 /* StartPage.swift */,
 			);
 			path = StartPageView;
-			sourceTree = "<group>";
-		};
-		F8E7FBA427FD6DA900CF3F7E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F8C1163B27FEBB1300AC6744 /* TestWikiContentView.swift */,
-				F8E7FBA527FD6E9D00CF3F7E /* ReadWikiView.swift */,
-				F8E7FBAA27FD73A000CF3F7E /* EditWikiView.swift */,
-				F8C1163F27FEC2F300AC6744 /* EditableMarkdownView.swift */,
-				F8C1163927FEB49900AC6744 /* WikiModel.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,29 +381,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD265602800194900C6B562 /* MainList.swift in Sources */,
 				835E4E6A28002FE400EB80B3 /* PasswordView.swift in Sources */,
 				F8FB040A280024BB00026CAD /* NotificationSettingView.swift in Sources */,
 				838A03F6280029EF00496AC8 /* SignUpView.swift in Sources */,
-				9AD2655E2800191700C6B562 /* SearchBar.swift in Sources */,
 				2004978727FD6B8B00B217AC /* LoginView.swift in Sources */,
 				2004978927FD717000B217AC /* UserViewModel.swift in Sources */,
-				F8C1163C27FEBB1300AC6744 /* TestWikiContentView.swift in Sources */,
 				D1B1016B280407DF00B96122 /* StartPage.swift in Sources */,
-				F8E7FBA627FD6E9D00CF3F7E /* ReadWikiView.swift in Sources */,
 				83C762F127FD685100FDC8D0 /* ContentView.swift in Sources */,
+				9ACBC58A28069D5300C395A4 /* MainList.swift in Sources */,
+				9ACBC58628069CEE00C395A4 /* EditWikiView.swift in Sources */,
+				9ACBC58D28069D6300C395A4 /* SearchBar.swift in Sources */,
+				9ACBC58828069D1900C395A4 /* ReadWikiView.swift in Sources */,
 				83BDC5DB2805BE2300EF960F /* KeyboardGuardian.swift in Sources */,
-				F8C1164027FEC2F300AC6744 /* EditableMarkdownView.swift in Sources */,
 				322783FA2805698F00E47918 /* LoggedOutMyPageView.swift in Sources */,
 				83BDC5DD2805C36E00EF960F /* KitTextField.swift in Sources */,
 				320E53B927FECF2000D394F2 /* MyPageView.swift in Sources */,
 				32F6D779280024BC00902575 /* RuleView.swift in Sources */,
 				320E53BB27FECF5400D394F2 /* ChangePasswordView.swift in Sources */,
-				F8E7FBAB27FD73A000CF3F7E /* EditWikiView.swift in Sources */,
 				83C762EF27FD685100FDC8D0 /* AppleKiwiApp.swift in Sources */,
+				9ACBC58428069CBB00C395A4 /* User.swift in Sources */,
 				83BDC5D92805BDDD00EF960F /* GeometryGetter.swift in Sources */,
 				2004978B27FD72FD00B217AC /* SignInView.swift in Sources */,
-				F8C1163A27FEB49900AC6744 /* WikiModel.swift in Sources */,
 				3202D61428041F030054E508 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

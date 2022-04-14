@@ -18,16 +18,19 @@ struct SignInRootKey: EnvironmentKey {
 
 extension EnvironmentValues {
     var signInRoot: [Binding<Bool>] {
-        get {return self [SignInRootKey]}
-        set {return self[SignInRootKey] = newValue}
+        get {return self [SignInRootKey.self]}
+        set {return self[SignInRootKey.self] = newValue}
     }
 }
 
 struct SignInView: View {
     @Environment (\.signInRoot) private var signInRoot
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userAuth: UserAuth
     @State var user: UserViewModel = UserViewModel()
     @Binding var showSignUp: Bool
     @Binding var showResetPw: Bool
+    @State private var isAuth = false
     
     @State var authSucceed: Bool = false
     @State var authFail:Bool = false
@@ -54,12 +57,7 @@ struct SignInView: View {
             // 메인 페이지에서의 상태 처리가 필요함
             Button (action: {
                 if self.user.email == storedEmail && self.user.password == storedPassword {
-                    self.authSucceed = true
-                    self.authFail = false
-                }
-                else {
-                    self.authFail = true
-                    self.authSucceed = false
+                    self.isAuth.toggle()
                 }
             }) {
             Text("로그인")
@@ -69,7 +67,9 @@ struct SignInView: View {
                 .frame(width: 200, height: 60)
                 .background(Color("button kiwi"))
                 .cornerRadius(10.0)
-            }.disabled(!user.isLoginComplete)
+            }
+            .disabled(!user.isLoginComplete)
+            .fullScreenCover(isPresented: $isAuth, content: TabBar.init)
             
             // 비밀번호 찾기 버튼
             Button(action: {

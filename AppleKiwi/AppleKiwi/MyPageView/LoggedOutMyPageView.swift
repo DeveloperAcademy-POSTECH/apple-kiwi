@@ -25,7 +25,6 @@ struct LoggedOutMyPageView: View {
                             Text("로그인").foregroundColor(Color.navKiwi)
                                 .padding()
                         })
-                    
                 }
                 .padding(.top)
                 

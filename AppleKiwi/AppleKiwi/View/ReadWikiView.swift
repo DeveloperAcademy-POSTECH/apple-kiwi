@@ -25,6 +25,14 @@ struct ReadWikiView: View {
                         .bold()
                     Spacer()
                 }.padding()
+                HStack{
+                    Spacer()
+                    Image(user.picture ?? "kiwi")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                    Spacer()
+                }
                 Divider()
                 //                Text(user.content)
                 //                    .padding()

@@ -1,101 +1,196 @@
 //
-//  SignUpView.swift
+//  PasswordView.swift
 //  AppleKiwi
 //
-//  Created by MBSoo on 2022/04/06.
+//  Created by MBSoo on 2022/04/08.
 //
 
 import SwiftUI
 
 struct SignUpView: View {
+    @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 1)
+    @State private var name = Array<String>.init(repeating: "", count: 5)
+    @Environment (\.signInRoot) private var signInRoot
     @State var user: UserViewModel = UserViewModel()
-    @State var verify:String = ""
-    @State private var EnterVerify = false
-    @State private var EmailVerify = false
-    @Binding var showSignUp: Bool
-    @Binding var showResetPw: Bool
+    @State private var VerifyPassword = false
+    @State private var Repeatpassword:String = ""
+    @State var fieldFocus = [false, false, false, false, false]
+    @State var secureField:Bool  = true
+    
     var body: some View {
-        NavigationView{
-            VStack {
-                HStack(alignment: .firstTextBaseline){
-                    Text("이메일")
-                        .padding(.leading)
-                    Spacer()
-                    TextField("appledev@pos.idserve.net", text: $user.email)
-                        .keyboardType(.emailAddress)
-                        .textFieldStyle(.automatic)
-                        .frame(width: 230, height: 40, alignment: .leading)
-                    Spacer()
-                }
-                HStack(alignment: .firstTextBaseline){
-                    if(EnterVerify)
-                    {
-                        Text("인증번호")
-                        .padding(.leading)
-                        Spacer()
-                        TextField("", text: $verify)
-                            .keyboardType(.decimalPad)
-                            .textFieldStyle(.automatic)
-                            .frame(width: 230, height: 40, alignment: .leading)
-                            .submitLabel(.next)
-                            .onSubmit {
-                                
-                                validationEmail()
+        VStack{
+            NavigationView{
+                VStack(){
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Container@*/VStack/*@END_MENU_TOKEN@*/ {
+                        List{
+                            Image("kiwi")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250,
+                                       height: 250,
+                                       alignment: .topLeading)
+                                .clipShape(Circle()).padding()
+                            VStack {
+                                HStack{
+                                    Text("이름")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    KitTextField (
+                                        label: "김아무개",
+                                        text: $user.name,
+                                        focusable: $fieldFocus,
+                                        returnKeyType: .next,
+                                        tag: 0
+                                    ).keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                }
+                                if !user.isNameValid.isEmpty {
+                                    Text(user.isNameValid)
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                        .offset(x:40)
+                                }
                             }
-                        Spacer()
-                        
+                            VStack {
+                                HStack{
+                                    Text("닉네임")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    KitTextField (
+                                        label: "Any",
+                                        text: $user.nickname,
+                                        focusable: $fieldFocus,
+                                        returnKeyType: .next,
+                                        tag: 1
+                                    ).keyboardType(.default)
+                                        .textFieldStyle(.automatic)
+                                        .frame( height: 20, alignment: .leading)
+                                        .submitLabel(.next)
+                                    
+                                }
+                                if !user.isNicknameValid.isEmpty {
+                                    Text(user.isNicknameValid)
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                        .offset(x:45)
+                                }
+                            }
+                            VStack {
+                                HStack{
+                                    Text("이메일")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    KitTextField (
+                                        label: "kim22@pos.idserve.net",
+                                        text: $user.email,
+                                        focusable: $fieldFocus,
+                                        returnKeyType: .next,
+                                        tag: 2
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.next)
+                                    
+                                }
+                                if !user.validEmailAddress.isEmpty {
+                                    Text(user.validEmailAddress)
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                        .offset(x:74)
+                                }
+                            }
+                            VStack {
+                                HStack{
+                                    Text("비밀번호")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    KitTextField (
+                                        label: "password",
+                                        text: $user.password,
+                                        focusable: $fieldFocus,
+                                        isSecureTextEntry: $secureField,
+                                        returnKeyType: .next,
+                                        tag: 3
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.next)
+                                }
+                                if !user.isPasswordValid.isEmpty {
+                                    Text(user.isPasswordValid)
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                        .offset(x:50)
+                                }
+                            }
+                            VStack {
+                                HStack{
+                                    Text("비밀번호 확인")
+                                        .frame(width: 100, height: 20, alignment: .leading)
+                                        .padding(.trailing, 45.0)
+                                    KitTextField (
+                                        label: "password",
+                                        text: $user.confirmPassword,
+                                        focusable: $fieldFocus,
+                                        isSecureTextEntry: $secureField,
+                                        returnKeyType: .done,
+                                        tag: 4
+                                    )
+                                    .keyboardType(.default)
+                                    .textFieldStyle(.automatic)
+                                    .frame( height: 20, alignment: .leading)
+                                    .submitLabel(.done)
+                                    .onSubmit {
+                                        if(user.password == Repeatpassword){
+                                            VerifyPassword = true
+                                        }
+                                    }
+                                }
+                                if !user.passwordMatch(_confirmPw: user.confirmPassword) {
+                                    Text(user.isConfirmPasswordValid)
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                        .offset(x:65)
+                                }
+                            }
+                            
+
+                            HStack {
+                                Spacer()
+                                Button("회원가입") {
+                                    signInRoot.forEach {
+                                        $0.wrappedValue = false
+                                    }
+                                }
+                                .frame(width: 150, height: 40)
+                                .font(.system(size: 20).weight(.light))
+                                .foregroundColor(.white)
+                                .buttonStyle(.plain)
+                                .background(Color("button kiwi"))
+                                .cornerRadius(10)
+                                .padding()
+                                .opacity(!user.isSignInComplete ? 0.5 : 1)
+                                Spacer()
+                            }
+                        }
                     }
                 }
-                if(!EnterVerify){
-                    Button(action: {
-                        self.EnterVerify.toggle()
-                    }){
-                        Text("인증번호 전송")
-                            .frame(width: 130, height: 20, alignment: .center)
-                    }
-                    .disabled(!user.isEmailEmpty)
-                    .font(.footnote)
-                    .foregroundColor(.white)
-                    .buttonStyle(.bordered)
-                    .background(Color("button kiwi"))
-                    .cornerRadius(10)
-                }
-                else{
-                    Button(action: {
-                    }){
-                        Text("인증번호 재전송")
-                            .frame(width: 130, height: 20, alignment: .center)
-                    }
-                    .font(.footnote)
-                    .foregroundColor(.white)
-                    .buttonStyle(.bordered)
-                    .background(Color("button kiwi2"))
-                    .cornerRadius(10)
-                    NavigationLink(destination: PasswordView().navigationBarHidden(true), label:{ Text("인증번호 입력")
-                            .frame(width: 130, height: 20, alignment: .center
-                    )})
-                    .font(.footnote)
-                    .foregroundColor(.white)
-                    .buttonStyle(.bordered)
-                    .background(Color("button kiwi"))
-                    .cornerRadius(10)
-                    
-                    
-                }
-                
+                .navigationBarTitle(Text("회원가입"))
             }
-            .navigationBarTitle(Text("이메일 인증"))
         }
-    }
-    private func validationEmail(){
-        EmailVerify = true
+        
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct PasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(showSignUp: .constant(false), showResetPw: .constant(false))
-            .previewInterfaceOrientation(.portrait)
+        SignUpView()
     }
 }
+
+
 

@@ -89,7 +89,7 @@ struct SignInView: View {
             }
             .offset(y: -10)
             .sheet(isPresented: $showSignUp) {
-                SignUpView(showSignUp: $showSignUp, showResetPw: $showResetPw)
+                EmailVerifyView(showSignUp: $showSignUp, showResetPw: $showResetPw)
                     .environment(\.signInRoot, signInRoot + [$showSignUp])
             }
         }

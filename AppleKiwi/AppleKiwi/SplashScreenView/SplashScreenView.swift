@@ -31,7 +31,7 @@ struct SplashScreenView: View {
             Spacer()
             HStack{
                 Spacer()
-                Image("team logo").resizable().scaledToFit().frame(width:100)
+                Image("teamlogo").resizable().scaledToFit().frame(width:100)
             }
         }.ignoresSafeArea()
         .onAppear {

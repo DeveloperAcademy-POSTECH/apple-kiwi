@@ -12,7 +12,7 @@ import SwiftUI
 
 struct MyPageView: View {
     @State private var showSheet = false
-    @State private var isLoggedIn: Bool = false
+    @State private var isLoggedIn: Bool = true
     var body: some View {
         
         if(isLoggedIn){ NavigationView {

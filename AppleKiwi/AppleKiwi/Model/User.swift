@@ -26,38 +26,10 @@ struct User: Identifiable, Hashable {
     static var sampleUsers: [User] = [User.leeo, User.judy, User.changBro, User.buckil, User.cookie, User.milky, User.gary, User.seodam]
     
     static var leeo = User(picture:"Leeo" ,name: "리이오", content: """
-    ### Hi there 👋
-
-    I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡
-
-    I have a passion for clean code, Java, teaching, PHP, Lifeguarding and Javascript
-
-    My current side project is [Markdown Profile](https://markdownprofile.com)
-
-    [LinkedIn 💼](https://linkedin.com/in/dannyverpoort)
-
-    [Twitter 🐦](https://twitter.com/dannyverp)
-
-    [Website 🌍](https://dannyverpoort.dev/)
-
-    [Email 📬](mailto:hallo@dannyverpoort.nl)
+    ### 리오리오
     """)
     static var judy = User(picture:"Judy",name: "주디", content: """
-    ### Hi there 👋
-    
-    I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡
-    
-    I have a passion for clean code, Java, teaching, PHP, Lifeguarding and Javascript
-    
-    My current side project is [Markdown Profile](https://markdownprofile.com)
-    
-    [LinkedIn 💼](https://linkedin.com/in/dannyverpoort)
-    
-    [Twitter 🐦](https://twitter.com/dannyverp)
-    
-    [Website 🌍](https://dannyverpoort.dev/)
-    
-    [Email 📬](mailto:hallo@dannyverpoort.nl)
+    ### 주디주디
     """)
     static var changBro = User(picture:"ChangBro",name: "창브로", content: """
     ## 운동.. 좋아하세요...?
@@ -112,15 +84,14 @@ struct User: Identifiable, Hashable {
      <b><s>본인은 용납 못한다고 한다</s></b>
         
     ## 흰색 하이바 귀신
-    ![IMG_2976](https://user-images.githubusercontent.com/52993882/163394555-cf1cd3ac-adac-468a-850d-7c945f9b814f.jpg)
+    <img height="400" alt="스크린샷 2022-04-14 오후 5 50 45" src="https://user-images.githubusercontent.com/52993882/163394555-cf1cd3ac-adac-468a-850d-7c945f9b814f.jpg"/>
        
     포항공대 주변에 흰색 하이바를 쓰고 자전거를 타는 사람이 있다면 99.92% 게리라고 의심해 볼 수 있다.
        
    ## 알콜중독자
    코로나에 걸렸을 당시 미열이 남아있음에도 불구하고 알코올로 씻어낸다고 격리중에 홀로 위스키로 혼술을 했다.<br>
     <b><s>매일 술없이 잠들 수 없고 수업 중 손 떨리는 것을 자주 목격 당한다.</s></b>
-       
-       
+    
    ## 자칭 탱커
    롤 할때 탱커를 주로 한다고 한다.
    """ )

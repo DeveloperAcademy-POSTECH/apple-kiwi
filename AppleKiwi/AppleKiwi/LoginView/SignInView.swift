@@ -9,8 +9,8 @@ import SwiftUI
 
 let lightGray = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
-let storedEmail = "sunim22"
-let storedPassword = "sunim22"
+let storedEmail = "chaleea22"
+let storedPassword = "chaleea22"
 
 struct SignInRootKey: EnvironmentKey {
     static let defaultValue: [Binding<Bool>] = []

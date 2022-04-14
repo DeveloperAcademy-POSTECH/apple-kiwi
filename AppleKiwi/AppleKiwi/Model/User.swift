@@ -25,7 +25,7 @@ struct User: Identifiable, Hashable {
     
     static var sampleUsers: [User] = [User.leeo, User.judy, User.changBro, User.buckil, User.cookie, User.milky, User.gary, User.seodam]
     
-    static var leeo = User(picture:"" ,name: "리이오", content: """
+    static var leeo = User(picture:"Leeo" ,name: "리이오", content: """
     ### Hi there 👋
 
     I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡
@@ -42,7 +42,7 @@ struct User: Identifiable, Hashable {
 
     [Email 📬](mailto:hallo@dannyverpoort.nl)
     """)
-    static var judy = User(picture:"",name: "주디", content: """
+    static var judy = User(picture:"Judy",name: "주디", content: """
     ### Hi there 👋
     
     I'm Danny, a software engineer 💻 currently working at [Takeaway.com](https://takeaway.com) 🍲🥡

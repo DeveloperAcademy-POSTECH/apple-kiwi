@@ -12,7 +12,7 @@ import SwiftUI
 
 struct MyPageView: View {
     @State private var showSheet = false
-    @State private var isLoggedIn: Bool = true
+    @State private var isLoggedIn: Bool = false
     var body: some View {
         
         if(isLoggedIn){ NavigationView {
@@ -78,63 +78,9 @@ struct MyPageView: View {
             }.navigationBarHidden(true)
         }}
         else{
-            NavigationView{
-                VStack() {
-                    HStack {
-                        Text("마이페이지")
-                            .padding()
-                            .font(.system(size: 30,
-                                          weight: .bold))
-                        
-                        Spacer()
-                        
-                        NavigationLink(
-                            destination: LoginView(),
-                            label: {
-                                Text("로그인").foregroundColor(Color.navKiwi)
-                                    .padding()
-                            })
-                        
-                    }
-                    .padding(.top)
-                    
-                    HStack{ Image("kiwi")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100)
-                            .clipShape(Circle()).padding(.leading)
-                        Spacer()
-                        Text("로그인이\n필요합니다")
-                            .font(.title2)
-                        Spacer()
-                        Spacer()
-                        
-                        
-                    }
-                    
-                    List {
-                        
-                        
-                        NavigationLink(
-                            destination: RuleView(),
-                            label: {
-                                Text("기본 방침")
-                            })
-                        
-                        
-                        
-                    }
-                }.navigationBarHidden(true)
-                
-            }
+            LoggedOutMyPageView()
         }
-        
     }
-    
-    
-    
-    
-    
 }
 
 

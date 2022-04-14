@@ -67,8 +67,9 @@ struct SignInView: View {
                 .frame(width: 200, height: 60)
                 .background(Color("button kiwi"))
                 .cornerRadius(10.0)
-            }.disabled(!user.isLoginComplete)
-                .fullScreenCover(isPresented: $isAuth, content: MyPageView.init)
+            }
+            .disabled(!user.isLoginComplete)
+            .fullScreenCover(isPresented: $isAuth, content: TabBar.init)
             
             // 비밀번호 찾기 버튼
             Button(action: {

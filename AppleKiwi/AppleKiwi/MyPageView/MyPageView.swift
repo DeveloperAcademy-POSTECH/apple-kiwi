@@ -12,7 +12,7 @@ import SwiftUI
 
 struct MyPageView: View {
     @State private var showSheet = false
-    @State private var isLoggedIn: Bool = false
+    @State private var isLoggedIn: Bool = true
     var body: some View {
         
         if(isLoggedIn){ NavigationView {
@@ -36,7 +36,7 @@ struct MyPageView: View {
                 
                 
                 
-                HStack { Image("test")
+                HStack { Image("Cookie")
                         .resizable()
                         .edgesIgnoringSafeArea(.all)
                         .aspectRatio(contentMode: .fit)

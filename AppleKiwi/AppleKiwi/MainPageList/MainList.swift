@@ -34,7 +34,7 @@ struct MainList : View {
                                 ForEach(users.shuffled().indices) { index in
                                     NavigationLink(destination: ReadWikiView(user: self.$users[index])) {
                                         VStack {
-                                        Image(users[index].picture ?? "잼민 키위")
+                                        Image(users[index].picture ?? "Cookie")
                                             .resizable()
                                             .cornerRadius(20)
                                             .overlay(Circle().stroke(Color("light gray"), lineWidth: 1))

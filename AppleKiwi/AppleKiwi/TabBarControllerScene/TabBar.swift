@@ -23,7 +23,7 @@ struct TabBar: View {
                 }.tag(0)
 
             VStack(){
-                Image("worker kiwi")
+                Image("workerkiwi")
                     .resizable()
                     .scaledToFit()
                     .frame(width:370)

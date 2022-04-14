@@ -9,14 +9,15 @@ import SwiftUI
 import MarkdownView
 
 struct ReadWikiView: View {
+
     @State private var isShowingSheet: Bool = false
     //@EnvironmentObject var user: User
     
     @Binding var user: User
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+
     var body: some View {
-       ScrollView {
+        ScrollView {
             VStack {
                 HStack {
                     Text("\(user.name)")
@@ -25,8 +26,8 @@ struct ReadWikiView: View {
                     Spacer()
                 }.padding()
                 Divider()
-//                Text(user.content)
-//                    .padding()
+                //                Text(user.content)
+                //                    .padding()
                 MarkdownUI(body: user.content)
                 Spacer()
             }
@@ -40,19 +41,22 @@ struct ReadWikiView: View {
             }
             .sheet(isPresented: $isShowingSheet) {
                 EditWikiView(isShowingSheet: $isShowingSheet, user: $user)
-            }
+            }.foregroundColor(Color.navKiwi)
         }
     }
     
     var btnBack : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.blue)
-                    Text("뒤로 가기")
-                }
-            }
+        self.presentationMode.wrappedValue.dismiss()
+    })
+        {
+        HStack {
+            Image(systemName: "chevron.backward")
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(Color.navKiwi)
+            Text("뒤로 가기")
+                .foregroundColor(Color.navKiwi)
+           
         }
+    }
+    }
 }

@@ -23,12 +23,11 @@
 
 ## Demo Screenshots
 
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![스크린샷 2022-04-16 오후 5 11 02](https://user-images.githubusercontent.com/77095328/163667860-10c2bf33-9d7b-436e-958e-09fae25cc9c0.jpeg)
+![스크린샷 2022-04-16 오후 5 08 58](https://user-images.githubusercontent.com/77095328/163667866-f11a2f78-90ca-47d4-ad3e-03abee3fd8ce.jpeg)
+![스크린샷 2022-04-16 오후 5 09 29](https://user-images.githubusercontent.com/77095328/163667871-d84b8dac-ddba-4b2a-9bf1-d1fbbab29deb.jpeg)
+
+
 
 
 ## Skills & Tech Stack

@@ -1,6 +1,6 @@
 # apple-kiwi
+![Logo](https://user-images.githubusercontent.com/77095328/163667084-44008861-fbf8-417f-876f-5a75aa858f02.png)
 
-![Logo](https://dummyimage.com/1000x300/000/fff.png)
 
 
 # :iphone: Project Title
